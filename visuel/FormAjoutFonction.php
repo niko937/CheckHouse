@@ -1,6 +1,6 @@
 <?php 
-include 'top.php';
-require ("fonctionnalite.php")
+include '../visuel/top.php';
+require ("../fonction/fonctionnalite.php")
 
  ?>
 <body /visuel/Images/background.jpg>
@@ -9,7 +9,7 @@ require ("fonctionnalite.php")
 		Nouvelle fonctionnalité
 	</div>
 
-	<form id=formulaire method="post" action= enctype="multipart/form-data">
+	<form id=formulaire method="post" action="../ajout_fonction.php" enctype="multipart/form-data">
 		
 		<fieldset id="form-fonctionnalite"> <legend></legend> <br>
 
@@ -31,4 +31,4 @@ require ("fonctionnalite.php")
 				<input class="ajouter_fonc" type="submit" value="Ajouter" />
 			</div>
 
-<?php include 'bottom_ajout_fonction.php'; ?>
+<?php include '../fonction/bottom_ajout_fonction.php'; ?>
