@@ -1,8 +1,11 @@
 <?php 
-include '../visuel/top.php';
+include './top.php';
 require ("../fonction/fonctionnalite.php")
 
+
+
  ?>
+ <link rel=stylesheet type=text/css href="../visuel/style2.css"></head>
 <body /visuel/Images/background.jpg>
 
 	<div class="titre_PageFonc">
@@ -31,4 +34,4 @@ require ("../fonction/fonctionnalite.php")
 				<input class="ajouter_fonc" type="submit" value="Ajouter" />
 			</div>
 
-<?php include '../fonction/bottom_ajout_fonction.php'; ?>
+<?php include '../visuel/bottom_ajout_fonction.php'; ?>
