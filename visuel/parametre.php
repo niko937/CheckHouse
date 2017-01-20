@@ -44,7 +44,7 @@
 	 		</ul>
 	 	</div>
 	 	<div class="ajout_fonction">
-	 		<a href="FormAjoutFonction.php"> + ajouter une fonction </a>
+	 		<a href="../visuel/FormAjoutFonction.php"> + ajouter une fonction </a>
 	 	</div>
 
 	 	

@@ -1,12 +1,11 @@
 <?php
-//indou
-//oindfoinsiefn
+
 function getNomPiece($idPiece)
 {
 	global $piece;
 	$servername = "localhost";
 	$username = "root";
-	$password = "root";
+	$password = "";
 	$dbname = "mydb";
 	try 
 	{
