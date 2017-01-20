@@ -9,13 +9,13 @@
 	</head>
 	
 	<?php 
-		include("gabarit.php");
+		include ("../visuel/top.php");
 	?>
 	<body>
 		<h1 align="center";><b>Ma Maison</b></h1>		
 		
 		<div class="modif"><h2>Modifications</h2>
-			<form class="ajout_piece" align="center" method="post" action="traitement.php"> 
+			<form class="ajout_piece" align="center" method="post" action="../fonction/traitement.php"> 
 				<fieldset> 
 			    	<legend class="lgd">Ajout d'une pièce</legend>
 					<label> Nom : </label>
@@ -31,7 +31,7 @@
 
 
 		<div class="pieces"><h2>Mes Pièces</h2>
-			<form class ="acces_piece" align ="center" method="post" action="accespiece.php">
+			<form class ="acces_piece" align ="center" method="post">
 				<fieldset>
 					<legend class="lgd">Accéder à une pièce</legend>
 						
@@ -54,7 +54,10 @@
 				</fieldset>
 
 			</form>
-		</div>			
+		</div>	
+		<?php 
+			include("../visuel/bottom.php");	
+		?>	
 	</body>
 </html>
 

@@ -5,8 +5,8 @@ h1 {
 	color : black;	
 	font-size : 40;
 	background:#B0D000;
-	margin-right : 150px;
-	margin-left : 150px;
+	margin-right : 200px;
+	margin-left : 200px;
 	padding : 1em;
 	border-radius : 20px;
 	border:outset #B0D000;
@@ -102,10 +102,11 @@ fieldset{
 div.titre {
 		}
 div.pieces {
-		 	
+		 margin-left: 200px;
 		 float:left;
 		 width:500px;
 		 height:675px;
+		 margin-left: : 200px;
 		 background-color: #B0D000;
 		 border-radius: 20px;
 		 border:outset #B0D000;
@@ -113,6 +114,7 @@ div.pieces {
 		
 div.modif {
 		 float:right;		 
+		 margin-right: 200px;
 		 width:500px;
 		 height:675px;
 		 background-color: #B0D000;
@@ -120,15 +122,6 @@ div.modif {
 		 border:outset #B0D000;
 		}
 
-div.lapiece {
-		 float:right;
-		 margin-right : 32.5%;
-		 width:600px;
-		 height:675px;
-		 background-color: #B0D000;
-		 border-radius: 20px;
-		 border:outset #B0D000;
-		}
 /* les boutons enregistrer */
 input[type="submit"] {
   background:#DED983;
