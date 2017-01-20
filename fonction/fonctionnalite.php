@@ -1,5 +1,5 @@
 <?php
-
+//indou
 function getNomPiece($idPiece)
 {
 	global $piece;
