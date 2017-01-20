@@ -1,5 +1,6 @@
 <?php
 //indou
+//oindfoinsiefn
 function getNomPiece($idPiece)
 {
 	global $piece;
