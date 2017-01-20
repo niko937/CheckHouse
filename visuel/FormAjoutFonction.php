@@ -1,13 +1,10 @@
 <?php 
 include 'top.php';
 require ("fonctionnalite.php")
-
  ?>
+
 <body /visuel/Images/background.jpg>
 
-	<div class="titre_PageFonc">
-		Nouvelle fonctionnalité
-	</div>
 
 	<form id=formulaire method="post" action= enctype="multipart/form-data">
 		
@@ -27,8 +24,7 @@ require ("fonctionnalite.php")
 		</fieldset>
 	</form>
 </body>
-<div>
-				<input class="ajouter_fonc" type="submit" value="Ajouter" />
-			</div>
-
-<?php include 'bottom_ajout_fonction.php'; ?>
+		<input class="ajouter_fonc" type="submit" value="Ajouter" />
+<?php
+ include 'bottom_ajout_fonction.php'; 
+ ?>
