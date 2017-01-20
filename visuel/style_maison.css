@@ -1,0 +1,137 @@
+body {
+	background-color : #dddddd
+	}
+h1 {		
+	color : black;	
+	font-size : 40;
+	background:#B0D000;
+	margin-right : 150px;
+	margin-left : 150px;
+	padding : 1em;
+	border-radius : 20px;
+	border:outset #B0D000;
+	}
+h2{	
+	
+	background:#DED983;
+	margin-right : 4em;
+	margin-left : 4em;
+	border-radius: 20px 0px 20px 0px;
+	border:outset #B0D000;
+	padding : 1em;	
+	color : black;
+	font-size : 30;
+	font-style : bold;
+    text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: black;
+  background: #DED983;
+}
+
+
+p {
+	color : black
+	}
+
+legend.lgd {
+		background:#DED983;
+		border:outset #B0D000;
+		color:#045071;
+		font-style : bold;
+		font-size : 20;
+		position : relative;
+		padding:.4em .3em;
+		}
+
+form.ajout_piece {
+	float : right auto;
+	margin-top :5px;
+	margin : 25;
+	width  : 300px;
+	padding : 1em;	
+	border: 1px  solide #CCC;
+	border-radius: 20px;
+	}
+
+form.ajout_capteur {	
+	float : right auto;
+	margin-left : 20px;
+	width  : 300px;
+	padding : 1em;
+	border: 1px  solide #CCC;
+	border-radius: 20px;
+	}
+	
+form.acces_piece {
+	float : left;
+	margin : 15;
+	width  : 300px;
+	padding : 1em;	
+	border: 1px  solide #CCC;
+	border-radius: 20px;
+	}
+
+
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    /* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
+    display: inline;
+    width: 60px;
+    text-align: left;
+}
+
+fieldset{
+  background : silver;
+  border:outset #B0D000;
+  margin-bottom:1em;
+  width:24em;
+  padding-top:1.5em;
+}
+	
+div.titre {
+		}
+div.pieces {
+		 	
+		 float:left;
+		 width:500px;
+		 height:675px;
+		 background-color: #B0D000;
+		 border-radius: 20px;
+		 border:outset #B0D000;
+		}
+		
+div.modif {
+		 float:right;		 
+		 width:500px;
+		 height:675px;
+		 background-color: #B0D000;
+		 border-radius: 20px;
+		 border:outset #B0D000;
+		}
+
+div.lapiece {
+		 float:right;
+		 margin-right : 32.5%;
+		 width:600px;
+		 height:675px;
+		 background-color: #B0D000;
+		 border-radius: 20px;
+		 border:outset #B0D000;
+		}
+/* les boutons enregistrer */
+input[type="submit"] {
+  background:#DED983;
+  font:1.2em "Trebuchet MS", Verdana, sans-serif;
+  color:#345071;
+}
