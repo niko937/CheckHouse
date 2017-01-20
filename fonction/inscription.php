@@ -1,5 +1,9 @@
 <?php
+<<<<<<< Updated upstream
 //ALEX
+=======
+//VODKAa
+>>>>>>> Stashed changes
 /////////////// Pour se connecter à la Base de donnée ///////////////
 $servername = "localhost"; //adresse du serveur
 $username = "root"; //identifiant
