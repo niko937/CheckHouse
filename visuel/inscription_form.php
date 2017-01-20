@@ -2,10 +2,10 @@
 include 'top.php';
 
  ?>
- <header><link rel=stylesheet type=text/css href="/visuel/style.css"></header>
+ <header><link rel=stylesheet type=text/css href="/CheckHouse/visuel/style.css"></header>
 <body /visuel/Images/background.jpg>
 <h1> Inscription </h1>
-	<form id=formulaire method="post" action="/fonction/inscription.php" enctype="multipart/form-data">
+	<form id=formulaire method="post" action="/CheckHouse/fonction/inscription.php" enctype="multipart/form-data">
 
 
 		
