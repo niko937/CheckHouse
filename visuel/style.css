@@ -1,0 +1,192 @@
+head{
+	font-family: Tahoma;
+	text-align: center;
+}
+
+h1{
+	font-family: arial; 
+	font-size: 30;
+	text-align: center;
+	color: #B0D000;
+}
+
+ul{
+	font-family: arial; 
+	font-size: 30;
+	text-align: left;
+	color: black;
+}
+#logo
+{
+	height:70px;
+}
+
+#td_logo
+{
+	width:25%;
+}
+
+table
+{
+	border-collapse: separate;
+	width:100%;
+	text-align: center;
+}
+
+#table_bottom td
+{
+
+	font-size: small;
+	border-style: solid;
+	border-width: 1px;
+	background-color: grey;
+	border-radius: 5px;
+	border-color: #D9D9D9;
+
+}
+
+.bouton_bottom{
+	border-style: solid;
+	border-width: 2px;
+
+	font-style: bold;
+	font-size: large;
+	background-color: grey;
+}
+
+a
+{
+	font-color: white;
+}
+
+.bouton_menu
+{
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color:#B0D000;
+	width:150px;
+	font-style: bold;
+	font-size: large;
+	background-color: #B0D000;
+}
+
+.bouton_menu:hover
+{
+	background-color: gray;
+	border-color: white;
+	border-radius: 10px;
+}
+
+html *
+{
+	font-family: arial;
+}
+
+.main{
+	display: block;
+	min-height: 80%;
+}
+
+#table_top a:link
+{
+   color: black;
+   text-decoration: none;
+}
+
+#table_top a:visited
+{
+   color: black;
+   text-decoration: none;
+}
+
+#table_top a:hover
+{
+   color: white;
+   text-decoration: none;
+}
+
+#table_top a:black
+{
+   color: none;
+   text-decoration: none;
+}
+
+#table_bottom a:visited
+{
+   color: white;
+   text-decoration: none;
+}
+#table_bottom a:link
+{
+   color: white;
+   text-decoration: none;
+}
+
+.bouton_login
+{
+	width:250px;
+}
+
+#contenu{
+	width:600px;
+    min-height:400px;
+    margin-left:200px;
+    background-color: #cccccc;
+}
+
+/*/////////////////////////////////////////PARTIE FORMULAIRE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+fieldset{
+	padding: 0;
+	color: grey;
+	border-radius: 10px;
+	border: none;
+	background-color: silver;
+	}
+
+label{
+	display: block;
+	float: left;
+	width: 25%;
+}
+
+input{
+	margin-left: 20%;
+	margin-bottom: 2%; 
+	height: 25px;
+	width: 50%;
+	border-radius: 2px;
+	border: none;
+	border-bottom: solid #B0D000;
+}
+#input-cle{
+	width: 90%;
+	margin-left: 3%;
+}
+
+legend{
+	color: black;
+	font-size: 30px;
+}
+#formulaire{
+padding: 20%;
+}
+#form-profile{
+	padding: 3%;
+}
+#form-adresse{
+	padding: 3%;
+}
+#form-clee{
+	padding: 3%;
+}
+#form-envoie{ /* le bouton envoie */
+	width: 30%;
+	background-color: white;
+	border-color: silver;
+	margin-left: 41%;
+}
+
+
+
