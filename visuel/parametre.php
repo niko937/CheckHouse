@@ -2,8 +2,8 @@
 
 <html>
 <head>
-	<link rel=stylesheet type=text/css href="style2.css"></head>
-	 <?php include ("top.php");?>
+	<link rel=stylesheet type=text/css href="../visuel/style2.css"></head>
+	 <?php include ("../visuel/top.php");?>
 
      <?php
      	$idPiece=1;
@@ -12,7 +12,7 @@
      ?>
 	 <body>
 
-	 	<?php require ("fonctionnalite.php"); ?>
+	 	<?php require ("../fonction/fonctionnalite.php"); ?>
 	 	<div class="titre_PageFonc">
 	 		<?php 
 	 		getNomFonctionnalite($idPiece); 
@@ -49,5 +49,5 @@
 
 	 	
 	</body>
-	 <?php include ("bottom.php"); ?>
+	 <?php include ("../visuel/bottom.php"); ?>
 </html>

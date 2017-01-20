@@ -27,7 +27,6 @@ function getNomPiece($idPiece)
 	}
 	catch(PDOException $e)
 	{
-    echo $sql . "<br>" . $e->getMessage();
 	}
 	$conn = null;
 }
@@ -58,7 +57,7 @@ function getNomFonctionnalite($idPiece)
     }
     catch(PDOException $e)
     {
-    echo $sql . "<br>" . $e->getMessage();
+
     }
     $conn = null;
 }

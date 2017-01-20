@@ -6,7 +6,7 @@
 	<table id=table_top>
 		<tr>
 			<td id="td_logo">
-				<img id=logo src="/visuel/images/logo.png">
+				<img id=logo src="../visuel/images/logo.png">
 			</td>
 			<td class=bouton_menu type=button>
 				<a href="index.php"> Accueil </a>
