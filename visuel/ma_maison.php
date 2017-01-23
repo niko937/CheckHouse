@@ -33,7 +33,7 @@
 			</form>	
 
 		</div>		
-
+//indou
 
 		<div class="pieces"><h2>Mes Pièces</h2>
 			<form class ="acces_piece" align ="center" method="post" action="accespiece.php">
