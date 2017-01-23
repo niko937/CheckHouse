@@ -250,6 +250,17 @@ fieldset{
 	background-color: silver;
 	}
 
+.fieldAjoutFonc 
+{
+	color: grey;
+	width: 40%;
+	margin-left: 33.5%;
+	border-radius: 10px;
+	border: none;
+	background-color: silver;
+}
+
+
 .ajouter_fonc
 {
 	width: 10%;

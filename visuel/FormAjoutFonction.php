@@ -5,7 +5,7 @@ require ("../fonction/fonctionnalite.php")
 //indou
 
  ?>
- <link rel=stylesheet type=text/css href="../visuel/style2.css"></head>
+ <link rel=stylesheet type=text/css href="../visuel/style.css"></head>
 <body /visuel/Images/background.jpg>
 
 	<div class="titre_PageFonc">
