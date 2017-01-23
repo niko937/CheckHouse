@@ -248,7 +248,7 @@ select
 	border-radius: 2px;
 }
 
-fieldset
+.fieldAjoutFonc 
 {
 	color: grey;
 	width: 30%;
@@ -273,19 +273,20 @@ fieldset
   	left: 45%;
   	bottom: 43%;
 }
-label{
+
+.labelAjoutFonc{
 	width: 30%;
 	float: left;
-
 }
-input{
+
+.inputAjoutFonc{
 	width: 70%;
 	height: 25px;
 	border-radius: 2px;
 	border: none;
 	border-bottom: solid #B0D000 3px;
-	
 }
+
 legend{
 	color: white;
 	font-size: 30px;
