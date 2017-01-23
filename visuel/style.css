@@ -247,17 +247,6 @@ ul a:link
    text-decoration: none;
 }
 
-#td_logo td
-{
-	width:30%;
-}
-
-#logo
-{
-	width:100%;
-	height:100%;
-}
-
 
 table
 {
@@ -299,14 +288,29 @@ a
 {
 	font-color: white;
 }
+/////////////////////////////////////// TOP /////////////////////////////
+
+#div_top{
+	display: block;
+	float: left;
+}
+
+#logo
+{
+	width:40%;
+	height:20%;
+	margin-left: 32%;
+}
+
 
 .bouton_menu
 {
 	border-style: solid;
-	border-width: 2px;
-	border-radius: 5px;
+	border-width: 0px;
+	border-radius: 0px;
 	border-color:#B0D000;
-	width:150px;
+	width:15%;
+	height: 10%;
 	font-style: bold;
 	font-size: large;
 	background-color: #B0D000;
@@ -316,12 +320,12 @@ a
 {
 	background-color: gray;
 	border-color: white;
-	border-radius: 10px;
+	border-radius: 0px;
 }
 
 html *
 {
-	font-family: arial;
+	font-family: Tangerine;
 }
 
 #table_top a:link
