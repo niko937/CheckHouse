@@ -7,7 +7,7 @@
 		</meta>
 
 	</head>
-	
+	//indou
 	<?php 
 		include("top.php");
 	?>
