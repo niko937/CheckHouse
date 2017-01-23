@@ -4,20 +4,13 @@
 <head>
 	<link rel=stylesheet type=text/css href="../visuel/style2.css"></head>
 	 <?php include ("../visuel/top.php");?>
-
-     <?php
-     	$idPiece=1;
-     	$idPieceBis=1;
-     	$idPieceTer=3;
-     ?>
+	 <?php require ("../fonction/fonctionnalite.php"); ?>
+	 
 	 <body>
-
-	 	<?php require ("../fonction/fonctionnalite.php"); ?>
 	 	<div class="titre_PageFonc">
 	 		<?php 
-	 		getNomFonctionnalite($idPiece); 
-	 		getNomPiece($idPiece);
-
+	 		getNomFonctionnalite(); 
+	 		getNomPiece();
 	 		?>
 	 	</div>
 
@@ -30,10 +23,10 @@
 	 		Autres fonctionnalitées
 	 		<ul style="list-style-type:square;">
 	 			<li>
-	 				<a href="index.php"> <?php getNomFonctionnalite($idPieceBis); ?> </a>
+	 				<a href="index.php"> <?php getNomFonctionnalite(); ?> </a>
 	 			</li>
 	 			<li>
-	 				<a href="index.php"> <?php getNomFonctionnalite($idPieceTer); ?> </a>
+	 				<a href="index.php"> <?php getNomFonctionnalite(); ?> </a>
 	 			</li>
 	 			<li>
 	 				<a href="index.php">fonction3 </a>
@@ -44,10 +37,10 @@
 	 		</ul>
 	 	</div>
 	 	<div class="ajout_fonction">
-	 		<a href="../visuel/FormAjoutFonction.php"> + ajouter une fonction </a>
+	 		<a href="../visuel/FormAjoutFonction.php?id=<?php $id=recupIdPieceFromMaison(); echo $id;?>"> + ajouter une fonction </a>
 	 	</div>
 
 	 	
 	</body>
 	 <?php include ("../visuel/bottom.php"); ?>
-</html>
+</html>$
