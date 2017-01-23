@@ -41,9 +41,6 @@
 					<legend class="lgd">Accéder à une pièce</legend>
 						
 						<?php
-
-							$bdd = $conn ;
-
     						$bdd = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', 'root', 'root');
 							$reponse = $bdd->query('SELECT * FROM piece');
 							while ($donnees = $reponse->fetch())

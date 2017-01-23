@@ -6,7 +6,7 @@ $servername = "localhost"; //adresse du serveur
 $username = "root"; //identifiant
 $password = "root"; //mdp
 $dbname = "mydb"; //base à la quel il y accède
-return $conn = mysqli_connect($servername, $username, $password, $dbname);
+return $con = mysqli_connect($servername, $username, $password, $dbname);
 }
 
 ?>
