@@ -5,7 +5,7 @@
 <header>
 	<table id="table_top">
 		<tr>
-			<td>
+			<td id="td_logo">
 				<img id="logo" src="../visuel/images/logo.png">
 			</td>
 			<td class="bouton_menu" type=button>
