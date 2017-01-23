@@ -83,11 +83,6 @@ html *
 	font-family: arial;
 }
 
-.main{
-	display: block;
-	min-height: 80%;
-}
-
 #table_top a:link
 {
    color: black;
@@ -170,17 +165,10 @@ legend{
 	font-size: 30px;
 }
 #formulaire{
-padding: 20%;
+padding-left: 20%;
+padding-right: 20%;
 }
-#form-profile{
-	padding: 3%;
-}
-#form-adresse{
-	padding: 3%;
-}
-#form-clee{
-	padding: 3%;
-}
+
 #form-envoie{ /* le bouton envoie */
 	width: 30%;
 	background-color: white;
