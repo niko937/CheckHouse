@@ -10,11 +10,113 @@ h1{
 	color: #B0D000;
 }
 
-ul{
+.titre_liste
+{
+	float:left;
+	border:2px;
+	border-style: solid;
+	border-color:white;
+	width:22%;
+	font-family: arial; 
+	font-size: 25;
+	color: white;
+	text-align: center;
+	border-radius:5%;
+	background-color: #B0D000;
+    padding: 10px;
+    height:60%;
+}
+
+.consigne
+{
+	float:right;
+	border-style: solid;
+	width:16%;
+	font-family: arial; 
+	font-size: 25;
+	color: white;
+	text-align: center;
+	border-radius:6%;
+	background-color: #B0D000;
+    padding: 10px;
+    height:60%;
+}
+
+.ajout_fonction
+{
+	position: absolute;
+  	left: 0.58em;
+  	bottom: 2.5em;
+	border: 3px;
+	border-style: dotted;
+	border-color:#B0D000;
+	width:22%;
+	font-family: arial; 
+	font-size: 25;
+	color: #B0D000;
+	text-align: center;
+	border-radius:2%;
+	padding: 0.1%;
+	background-color: white;
+}
+
+.titre_PageFonc
+{
+	float:center;
 	font-family: arial; 
 	font-size: 30;
-	text-align: left;
-	color: black;
+	text-align: center;
+	color: #B0D000;
+	padding:1%;
+}
+
+.ajout_fonction a:hover
+{
+	background-color: none;
+	border-color: white;
+	text-transform:uppercase;
+	border-radius: 3px;
+}
+.ajout_fonction a:link
+{
+   text-decoration: none;
+   color:black;
+}
+
+.main{
+	display: block;
+	min-height: 72%;
+}
+
+.main_bottom_ajout
+{
+	display: block;
+	min-height: 37%;
+}
+
+}
+
+ul{
+	font-family: arial; 
+	font-size: 20;
+
+	color: white;
+	line-height: 300%;
+	
+}
+ul a:hover
+{
+	display: inline-block;
+  	vertical-align: middle;
+  	box-shadow: 1.5px 1.5px 1.5px 1.5px black;
+	background-color: grey;
+	border-color: white;
+	border-radius: 3px;
+}
+ul a:link
+{
+   color: white;
+   text-decoration: none;
 }
 #logo
 {
@@ -32,6 +134,14 @@ table
 	width:100%;
 	text-align: center;
 }
+.tab_parametre table
+{
+	border-collapse: collapse;
+	border-color: red;
+	width:50%;
+	text-align: center;
+}
+
 
 #table_bottom td
 {
@@ -140,6 +250,28 @@ fieldset{
 	background-color: silver;
 	}
 
+.ajouter_fonc
+{
+	width: 10%;
+	background-color: white;
+	border: solid #B0D000 3px;
+	position: absolute;
+  	left: 45%;
+  	bottom: 43%;
+}
+
+.labelAjoutFonc{
+	width: 30%;
+	float: left;
+}
+
+.inputAjoutFonc{
+	width: 70%;
+	height: 25px;
+	border-radius: 2px;
+	border: none;
+	border-bottom: solid #B0D000 3px;
+}
 label{
 	display: block;
 	float: left;
