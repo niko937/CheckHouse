@@ -5,7 +5,7 @@ require ("../fonction/fonctionnalite.php")
 //indou
 
  ?>
- <link rel=stylesheet type=text/css href="../visuel/style2.css"></head>
+ <link rel=stylesheet type=text/css href="../visuel/style.css"></head>
 <body /visuel/Images/background.jpg>
 
 	<div class="titre_PageFonc">
@@ -14,9 +14,9 @@ require ("../fonction/fonctionnalite.php")
 
 	<form id=formulaire method="post" action="../ajout_fonction.php" enctype="multipart/form-data">
 		
-		<fieldset id="form-fonctionnalite"> <legend></legend> <br>
+		<fieldset class="fieldAjoutFonc"> <legend></legend> <br>
 
-			<label>Fonctionnalite</label>  
+			<label class="labelAjoutFonc">Fonctionnalite</label>  
 			<select name="Fonctionnalite" type="text">
 				<option value="Temperature">Temperature</option>
 				<option value="Humidite">Humidite</option>
@@ -24,8 +24,8 @@ require ("../fonction/fonctionnalite.php")
 				<option value="Volet">Volet</option>
 			</select><br><br><br>
 
-			<label>Cle Produit</label>  
-			<input name="CleProduit" type="integer"></input> <br>
+			<label class="labelAjoutFonc">Cle Produit</label>  
+			<input class="inputAjoutFonc" name="CleProduit" type="integer"></input> <br>
 			
 		</fieldset>
 	</form>
