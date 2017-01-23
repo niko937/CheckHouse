@@ -37,10 +37,10 @@
 	 		</ul>
 	 	</div>
 	 	<div class="ajout_fonction">
-	 		<a href="../visuel/FormAjoutFonction.php"> + ajouter une fonction </a>
+	 		<a href="../visuel/FormAjoutFonction.php?id=<?php $id=recupIdPieceFromMaison(); echo $id;?>"> + ajouter une fonction </a>
 	 	</div>
 
 	 	
 	</body>
 	 <?php include ("../visuel/bottom.php"); ?>
-</html>
+</html>$
