@@ -1,12 +1,5 @@
 <html>
-	<head>
-		<title>Ma Maison</title>
-		<meta>
-		<link rel="stylesheet" type ="text/css"
-		media="screen" href="style.css"
-		</meta>
-
-	</head>
+	
 
 	<?php 
 
@@ -45,6 +38,7 @@
 							$reponse = $bdd->query('SELECT * FROM piece');
 							while ($donnees = $reponse->fetch())
 							 {
+
 							?>
 								<h3>
 							 	<a href= "parametre.php?id=<?php echo $donnees['idPiece'];?>">
@@ -54,6 +48,7 @@
 							 	</a>
 							 	</h3>
 							 	<?php
+
 							 }
 								?>
 				</fieldset>
@@ -61,5 +56,8 @@
 			</form>
 		</div>			
 	</body>
+	<?php
+	include ("bottom.php");
+	?>
 </html>
 
