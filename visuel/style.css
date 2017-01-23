@@ -246,15 +246,18 @@ ul a:link
    color: white;
    text-decoration: none;
 }
-#logo
+
+#td_logo td
 {
-	height:70px;
+	width:30%;
 }
 
-#td_logo
+#logo
 {
-	width:25%;
+	width:15%;
+	height:10%;
 }
+
 
 table
 {
