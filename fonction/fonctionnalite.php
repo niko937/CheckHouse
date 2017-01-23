@@ -1,11 +1,21 @@
 <?php
 
-function getNomPiece($idPiece)
+function recupIdPieceFromMaison()
+{
+    global $idPieceFromMaison;
+    $idPieceFromMaison = $_GET['id'];
+
+    //echo $idPieceFromMaison;
+    return $idPieceFromMaison;
+}
+
+function getNomPiece()
 {
 	global $piece;
+    $idPiece = recupIdPieceFromMaison();
 	$servername = "localhost";
 	$username = "root";
-	$password = "";
+	$password = "root";
 	$dbname = "mydb";
 	try 
 	{
@@ -30,9 +40,10 @@ function getNomPiece($idPiece)
 	$conn = null;
 }
 
-function getNomFonctionnalite($idPiece)
+function getNomFonctionnalite()
 {
     global $fonctionnalite;
+    $idPiece = recupIdPieceFromMaison();
     $servername = "localhost";
     $username = "root";
     $password = "root";
