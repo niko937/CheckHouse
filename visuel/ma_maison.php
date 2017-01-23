@@ -7,11 +7,11 @@
 		</meta>
 
 	</head>
-	//indou
+
 	<?php 
 
-		include("gabarit.php");
-		include ("/CheckHouse/fonction/connectionfunc.php");
+		include("top.php");
+		include ("../fonction/connectionfunc.php");
 
 	?>
 	<body>
@@ -41,7 +41,7 @@
 					<legend class="lgd">Accéder à une pièce</legend>
 						
 						<?php
-							$bdd = $con ;
+							$bdd = $conn ;
     						$bdd = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', 'root', 'root');
 							$reponse = $bdd->query('SELECT * FROM piece');
 							while ($donnees = $reponse->fetch())
