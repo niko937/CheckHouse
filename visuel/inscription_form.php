@@ -23,7 +23,7 @@ include 'top.php';
 			<label for="password_confirm">Confirmation</label>
 			<input type="password" name="Mdp_confirm" placeholder="Confirmer le mot de passe" /> <br>
  
-			<label for="Mail">Adresse Mail </label>
+			<label for="Mail">Mail </label>
 			<input type="text" name="Mail" placeholder="Exemple@domaine.com" /><br>
 
 		</fieldset>
@@ -34,7 +34,7 @@ include 'top.php';
 			<label for="ville">Ville</label><input name="ville">
 		</fieldset>
 		<fieldset id="form-clee"><legend>Clé produit</legend>
-		<input id="input-cle" type="text" name="cle" placeholder="indiquer la clée produit">
+		<input id="input-cle" type="text" name="cle" placeholder="Indiquer la clé produit">
 		</fieldset>
 		
 		<p>
