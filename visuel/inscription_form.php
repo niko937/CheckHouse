@@ -29,8 +29,7 @@ include 'top.php';
 		</fieldset>
 
 		<fieldset id="form-adresse"> <legend>Adresse</legend><br>
-			<label for="num">addresse </label> <input type="text" name="Rue">
-			<label id="num">numéro</label><input type="text" name="Numero"><br>
+			<label for="adresse">Adresse </label> <input type="text" name="Adresse">
 			<label for="code_postal">Code postal</label><input name="CodePostal"><br>
 			<label for="ville">Ville</label><input name="ville">
 		</fieldset>

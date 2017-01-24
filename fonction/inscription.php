@@ -11,8 +11,7 @@ $nom = $_POST['Nom'];
 $prenom = $_POST['Prenom'];
 $mail = $_POST['Mail'];
 $mdp = $_POST['Mdp'];
-$rue = $_POST['Rue'];
-$numero = $_POST['Numero'];
+$adresse = $_POST['Adresse'];
 $cdp = $_POST['CodePostal'];
 $cle = $_POST['cle'];
 
@@ -48,8 +47,8 @@ if(!empty($nom) && !empty($prenom) && !empty($mdp) && !empty($rue) && !empty($nu
 		VALUES ('{$_POST['Nom']}','{$_POST['Prenom']}' )";*/
 
 
-		$sql = "INSERT INTO Utilsateur (Nom, Prenom, Mail, Mdp, Rue, Numero, CodePostal)
-		VALUES ('$nom','$prenom','$mail','$mdp','$rue','$numero','$cdp')";
+		$sql = "INSERT INTO Utilsateur (Nom, Prenom, Mail, Mdp, Adresse, CodePostal)
+		VALUES ('$nom','$prenom','$mail','$mdp','$adresse','$cdp')";
 		mysqli_execute($sql);
 
 

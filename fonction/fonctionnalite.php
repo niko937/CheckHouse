@@ -23,7 +23,7 @@ function getNomPiece()
     	// set the PDO error mode to exception
     	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-    	$stmt= $conn->prepare("SELECT * FROM Piece WHERE idPiece='$idPiece'");
+    	$stmt= $conn->prepare("SELECT * FROM Piece WHERE idPiece='$idPiece'");  //Sécurité
     	$stmt->execute();
     	while ($data = $stmt->fetch())
     	{
