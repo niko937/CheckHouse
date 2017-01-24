@@ -9,7 +9,8 @@
 	 <body>
 	 	<div class="titre_PageFonc">
 	 		<?php 
-	 		getNomFonctionnalite(); 
+	 		getNomFonctionnalite();
+	 		echo ' ';
 	 		getNomPiece();
 	 		?>
 	 	</div>
@@ -36,8 +37,8 @@
 	 			</li>
 	 		</ul>
 	 	</div>
-	 	<div class="ajout_fonction">
-	 		<a href="../visuel/FormAjoutFonction.php?id=<?php $id=recupIdPieceFromMaison(); echo $id;?>"> + ajouter une fonction </a>
+	 	<div class="ajout_fonction">	 		
+	 		<a href="../visuel/FormAjoutFonction.php?id=<?php $idPiece=recupIdPieceFromMaison(); echo $idPiece;?>"> + ajouter une fonction </a>
 	 	</div>
 
 	 	
