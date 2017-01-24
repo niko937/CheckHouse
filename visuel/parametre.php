@@ -9,8 +9,11 @@
 	 <body>
 	 	<div class="titre_PageFonc">
 	 		<?php 
-	 		getNomFonctionnalite();
-	 		echo ' ';
+	 		if(isset($_GET["idF"]))
+	 		{
+	 			getNomFonctionnaliteTitre();
+	 			echo ' ';
+	 		}
 	 		getNomPiece();
 	 		?>
 	 	</div>
@@ -23,18 +26,40 @@
 	 	<div class="titre_liste">
 	 		Autres fonctionnalitées
 	 		<ul style="list-style-type:square;">
-	 			<li>
-	 				<a href="index.php"> <?php getNomFonctionnalite(); ?> </a>
-	 			</li>
-	 			<li>
-	 				<a href="index.php"> <?php getNomFonctionnalite(); ?> </a>
-	 			</li>
-	 			<li>
-	 				<a href="index.php">fonction3 </a>
-	 			</li>
-	 			<li>
-	 				<a href="index.php">fonction4 </a>
-	 			</li>
+	 			
+	 			<?php
+				$servername = "localhost";
+				$username = "root";
+				$password = "root";
+				$dbname = "mydb";
+
+				try 
+				{
+    				$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    				$stmt= $conn->prepare("SELECT * FROM Fonctionnalite");
+   		 			$stmt->execute();
+    				while ($data = $stmt->fetch())
+    				{
+
+    			?>
+    					<li>
+	 						<a href="parametre.php?id=<?php $idPiece=recupIdPieceFromMaison(); echo $idPiece;?>&idF=<?php echo $data['idFonctionnalite'];?>"> 
+	 							<?php echo $data['NomFonctionnalite']; ?>
+	 							
+	 						</a>
+	 					</li>
+	 					<?php
+    				}
+    				$stmt->closeCursor();
+				}
+				catch(PDOException $e)
+				{
+    				//echo $stmt . "<br>" . $e->getMessage();
+				}
+				$conn = null;
+				?>
+	 			
 	 		</ul>
 	 	</div>
 	 	<div class="ajout_fonction">	 		
@@ -43,5 +68,5 @@
 
 	 	
 	</body>
-	 <?php include ("../visuel/bottom.php"); ?>
-</html>$
+	 <?php include ("../visuel/bottom.php");?>
+</html>

@@ -43,6 +43,15 @@ function recupIdPieceFromMaison()
     return $idPieceFromMaison;
 }
 
+function recupIdFonc()
+{
+    global $idFonction;
+
+    $idFonction = $_GET['idF'];
+
+    return $idFonction;
+}
+
 function getNomPiece()
 {
 	global $piece;
@@ -77,10 +86,11 @@ function getNomPiece()
     return $piece;
 }
 
-function getNomFonctionnalite()
+function getNomFonctionnaliteTitre()
 {
     global $fonctionnalite;
     $idPiece = recupIdPieceFromMaison();
+    $idFonction = recupIdFonc();
     $servername = "localhost";
     $username = "root";
     $password = "root";
@@ -92,8 +102,9 @@ function getNomFonctionnalite()
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
-        $stmt= $conn->prepare("SELECT * FROM Fonctionnalite WHERE Piece_idPiece='$idPiece'");
+        $stmt= $conn->prepare("SELECT NomFonctionnalite FROM Fonctionnalite WHERE idFonctionnalite='$idFonction'");
         $stmt->execute();
+       
         while ($data = $stmt->fetch())
         {
             $fonctionnalite = $data['NomFonctionnalite'];
@@ -112,12 +123,10 @@ function getNomFonctionnalite()
     return $fonctionnalite;
 }
 
-function insertFonction($idPiece)
+function Li()
 {
     
 }
 
 
-//getNomPiece();
-//echo "tinetok"
 ?>
