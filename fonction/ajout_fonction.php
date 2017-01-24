@@ -1,13 +1,17 @@
 <?php
+require ('fonctionnalite.php');
 //définition des variables permettant de se connecter au serveur
 	$servername = "localhost";
 	$username = "root";
 	$password = "root";
 	$dbname = "mydb";
 //récupération de idPièce à partir de l'URL
-	$idPiece=$_GET['id'];
+	$idPiece = $_GET['id'];
 	$NomFonctionnalite = $_POST['Fonctionnalite'];
 	$CleProduit = $_POST['CleProduit'];
+	$idUtilisateur = recupIdUtilisateurFromPiece($idPiece);
+	echo $idPiece;
+
 
 //on tente de se connecter à la base de données
 	
@@ -20,8 +24,8 @@
 			$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     		// set the PDO error mode to exception
    	 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-			$sql = "INSERT INTO Fonctionnalite (NomFonctionnalite, CleProduit) WHERE Piece_idPiece = 'id'
-			VALUES ('$NomFonctionnalite','$CleProduit')";
+			$sql = "INSERT INTO Fonctionnalite (NomFonctionnalite, CleProduit, Piece_idPiece, Piece_Utilsateur_idUtilsateur)
+			VALUES ('$NomFonctionnalite','$CleProduit','$idPiece', '$idUtilisateur')";
 			$conn->exec($sql);
     		echo "Fonction ajoutée";
 		}
