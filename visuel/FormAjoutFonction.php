@@ -2,7 +2,7 @@
 include './top.php';
 require ("../fonction/fonctionnalite.php")
 
-//indou
+
 
  ?>
  <link rel=stylesheet type=text/css href="../visuel/style.css"></head>
