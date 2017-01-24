@@ -10,40 +10,30 @@
 	$CleProduit = $_POST['CleProduit'];
 
 //on tente de se connecter à la base de données
-	$conn = mysqli_connect($servername, $username, $password, $dbname);
+	
 //Execution de la requette vers la base de données
 	if(!empty($NomFonctionnalite) && !empty($CleProduit))
 
 	{
-
-		$sql = "INSERT INTO Fonctionnalite (NomFonctionnalite, CleProduit)
-		VALUES ('$NomFonctionnalite','$CleProduit')";
-		mysqli_execute($sql);
-
-
-
-		// affiche si il y a eu une erreur ou non: si pas d'erreur
-		// Vérification des erreur
-		if (mysqli_query($conn, $sql)) 
-			{
-		    	echo "Fonction ajouter";
-			} 
-		//si erreur indique l'erreur et tue la connectio
-		else 
-			{
-		    		echo "Error :'( " . $sql . "<br>" . mysqli_error($conn);
-			}
-		//fermer la connection
-		mysqli_close($conn);
+		try
+		{
+			$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    		// set the PDO error mode to exception
+   	 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$sql = "INSERT INTO Fonctionnalite (NomFonctionnalite, CleProduit) WHERE Piece_idPiece = 'id'
+			VALUES ('$NomFonctionnalite','$CleProduit')";
+			$conn->exec($sql);
+    		echo "Fonction ajoutée";
+		}
+		catch(PDOException $e)
+    	{
+    		echo $sql . "<br>" . $e->getMessage();
+    	}
+		$conn = null;
 	}
 else
 	{
 	echo "Veuilliez saisir tous les champs du formulaire";
 	}
-
-
-
-
-
 
 ?>
