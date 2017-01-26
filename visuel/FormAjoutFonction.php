@@ -12,7 +12,7 @@ require ("../fonction/fonctionnalite.php")
 		Nouvelle fonctionnalité
 	</div>
 
-	<form id=formulaire method="post" action="../fonction/ajout_fonction.php?id=<?php $idPiece=recupIdPieceFromMaison(); echo $idPiece;?>" enctype="multipart/form-data">
+	<form id=formulaire method="post" action="../fonction/ajout_fonction.php?id=<?php $idPiece=recupIdPieceFromMaison(); echo $idPiece;?>" enctype="multipart/form-data" href="parametre.php">
 		
 		<fieldset class="fieldAjoutFonc"> <legend></legend> <br>
 
@@ -29,7 +29,7 @@ require ("../fonction/fonctionnalite.php")
 			
 		</fieldset>
 		<div>
-				<input class="ajouter_fonc" type="submit" value="Ajouter" />
+				<input class="ajouter_fonc" type="submit" value="Ajouter"/>
 			</div>
 	</form>
 </body>
