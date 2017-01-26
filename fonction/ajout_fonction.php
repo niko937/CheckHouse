@@ -10,7 +10,7 @@ require ('fonctionnalite.php');
 	$NomFonctionnalite = $_POST['Fonctionnalite'];
 	$CleProduit = $_POST['CleProduit'];
 	$idUtilisateur = recupIdUtilisateurFromPiece($idPiece);
-	echo $idPiece;
+	//echo $idPiece;
 
 
 //on tente de se connecter à la base de données
@@ -27,7 +27,9 @@ require ('fonctionnalite.php');
 			$sql = "INSERT INTO Fonctionnalite (NomFonctionnalite, CleProduit, Piece_idPiece, Piece_Utilsateur_idUtilsateur)
 			VALUES ('$NomFonctionnalite','$CleProduit','$idPiece', '$idUtilisateur')";
 			$conn->exec($sql);
-    		echo "Fonction ajoutée";
+    		//echo "Fonction ajoutée";
+    		header("Location: ../visuel/parametre.php?id=".$idPiece);
+    		exit;
 		}
 		catch(PDOException $e)
     	{
