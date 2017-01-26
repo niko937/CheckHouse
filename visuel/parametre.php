@@ -32,19 +32,20 @@
 				$username = "root";
 				$password = "root";
 				$dbname = "mydb";
+				$idPiece = recupIdPieceFromMaison(); 
 
 				try 
 				{
     				$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    				$stmt= $conn->prepare("SELECT * FROM Fonctionnalite");
+    				$stmt= $conn->prepare("SELECT * FROM Fonctionnalite WHERE Piece_idPiece = '$idPiece' " );
    		 			$stmt->execute();
     				while ($data = $stmt->fetch())
     				{
 
     			?>
     					<li>
-	 						<a href="parametre.php?id=<?php $idPiece=recupIdPieceFromMaison(); echo $idPiece;?>&idF=<?php echo $data['idFonctionnalite'];?>"> 
+	 						<a href="parametre.php?id=<?php echo $idPiece;?>&idF=<?php echo $data['idFonctionnalite'];?>"> 
 	 							<?php echo $data['NomFonctionnalite']; ?>
 	 							
 	 						</a>
