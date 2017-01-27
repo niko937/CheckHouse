@@ -1,28 +1,35 @@
 <html>
+	
 	<head>
 		<title>Ma Maison</title>
-		<meta >
-		<link rel="stylesheet" type ="text/css"
-		media="screen" href="style_maison.css"
 
-		</meta>
+
+		
 	</head>
 	
 	<?php 
-		include ("top.php");
+
+		include("top.php");
+		include ("../fonction/connectionfunc.php");
+
+
 	?>
 	<body>
-		<h1 align="center";><b>Ma Maison</b></h1>		
+		<h1 class="h1maison" align="center";><b>Ma Maison</b></h1>		
 		
+
 		<div class="modif"><h2>Modifications</h2>
+
 			<form class="ajout_piece" align="center" method="post" action="../fonction/traitement.php"> 
 				<fieldset> 
-			    	<legend class="lgd">Ajout d'une pièce</legend><br />
-					<label> Nom : </label>
+
+			    	<legend class="lgd">Ajout d'une pièce</legend>
+					<label class="labelMaison"> Nom : </label>
 			 		<input type="text" name="nom" id="nom" placeholder=" Nom de la pièce"><br /><br />
-					
-					<a href="ma_maison.php">
-					<input type="submit" value="Enregistrer la pièce" />
+						<br /><br />
+					<as href="ma_maison.php">
+					<input class="inputMaison" type="submit" value="Enregistrer la pièce" />
+
 					</a>
 				</fieldset>
 
@@ -50,8 +57,9 @@
 
 		</div>		
 		<div class="pieces"><h2>Mes Pièces</h2>
-			<form class ="acces_piece" align ="center" method="post">
-				<fieldset>
+
+			<form class ="acces_piece" align ="center" method="post" action="accespiece.php">
+				<fieldset class="fieldsetMaison">
 					<legend class="lgd">Accéder à une pièce</legend>
 						
 						<?php
@@ -59,6 +67,7 @@
 							$reponse = $bdd->query('SELECT * FROM piece');
 							while ($donnees = $reponse->fetch())
 							 {
+
 							?>
 								<h3>
 							 	<a href= "parametre.php?id=<?php echo $donnees['idPiece'];?>">
@@ -68,6 +77,7 @@
 							 	</a>
 							 	</h3>
 							 	<?php
+
 							 }
 								?>
 				</fieldset>
@@ -78,5 +88,8 @@
 			include("bottom.php");	
 		?>	
 	</body>
+	<?php
+	include ("bottom.php");
+	?>
 </html>
 

@@ -23,19 +23,18 @@ include 'top.php';
 			<label for="password_confirm">Confirmation</label>
 			<input type="password" name="Mdp_confirm" placeholder="Confirmer le mot de passe" /> <br>
  
-			<label for="Mail">Adresse Mail </label>
+			<label for="Mail">Mail </label>
 			<input type="text" name="Mail" placeholder="Exemple@domaine.com" /><br>
 
 		</fieldset>
 
 		<fieldset id="form-adresse"> <legend>Adresse</legend><br>
-			<label for="num">addresse </label> <input type="text" name="Rue">
-			<label id="num">numéro</label><input type="text" name="Numero"><br>
+			<label for="adresse">Adresse </label> <input type="text" name="Adresse">
 			<label for="code_postal">Code postal</label><input name="CodePostal"><br>
 			<label for="ville">Ville</label><input name="ville">
 		</fieldset>
 		<fieldset id="form-clee"><legend>Clé produit</legend>
-		<input id="input-cle" type="text" name="cle" placeholder="indiquer la clée produit">
+		<input id="input-cle" type="text" name="cle" placeholder="Indiquer la clé produit">
 		</fieldset>
 		
 		<p>
