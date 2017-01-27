@@ -24,8 +24,10 @@
 				<a href="support.php"> Support (FAQ) </a>
 			</td>
 
+
 			<td class="bouton_menu" type=button>
-				<a href="/visuel/inscription_form.php"> Connexion </a>
+				<a href="../visuel/inscription_form.php"> Connexion </a>
+
 			</td>
 
 		</tr>
