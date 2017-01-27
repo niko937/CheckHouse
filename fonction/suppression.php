@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<?php
-		// Parametres mysql à remplacer par les vôtres
+		// Parametres mysql Ã  remplacer par les vÃ´tres
 			include ("../visuel/top.php");
 		    $dbname = 'mydb';
 		    $host='localhost';
@@ -18,28 +18,15 @@
 		    $db = mysqli_connect($host, $user, $pass, $dbname);
 
 		//    $db->query("SET NAMES UTF8");
-
-		// Messages d'erreur
-			$msg_erreur = "Erreur. Les champs suivants doivent être obligatoirement remplis :
-			<br/><br/>";
-			$msg_ok = "La piece est maintenant disponible.";
-			$message = $msg_erreur;
-			if (empty($_POST['nom'])) {
-			  $message .= "Nom de la pièce<br/>";
-			   echo $message;
-			}
-			else {
-			 $nom = $_POST['nom'];
-			 $sql = "INSERT INTO piece (NomPiece, Surface, Utilsateur_idUtilsateur) 
-			 VALUES ('$nom', 45, 1)";
+		     $idPiece = $_GET['id'];
+			 $sql = "DELETE FROM `piece` WHERE `piece`.`idPiece` = $idPiece";
 			 $res = mysqli_query($db, $sql);	 
 			 if ($res) {
-		    		echo $msg_ok;
+		    		echo "La piece a Ã©tÃ© supprimÃ©e.";
 		 		 } 
 		 	 else {
 		   		 echo mysqli_error($db);
 		  		}
-		  	}
 		include("../visuel/bottom.php");
 		?>
 	</body>

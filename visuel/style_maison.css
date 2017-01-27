@@ -1,49 +1,50 @@
 
-.h1maison {		
-	color : black;	
+body {
+	background-color : #dddddd
+	}
+h1 {		
+	color : white;	
+
 	font-size : 40;
 	background:#B0D000;
-	margin-right : 150px;
-	margin-left : 150px;
+	margin-right : 200px;
+	margin-left : 200px;
 	padding : 1em;
 	border-radius : 20px;
 	border:outset #B0D000;
 	}
 
-.h2maison{	
-	
-	background:#DED983;
-	margin-right : 4em;
-	margin-left : 4em;
-	border-radius: 20px 0px 20px 0px;
-	border:outset #B0D000;
-	padding : 1em;	
+h2{	
+	background:silver;
+	color : white;
+
 	color : black;
+
 	font-size : 30;
 	font-style : bold;
     text-align: center;
+    padding : 0.5em;
 }
 
 .amaison {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .amaison a:hover, a:focus, a:active {
   text-decoration: none;
   color: black;
-  background: #DED983;
+  background: silver;
 }
 
 
 p {
-	color : black
+	color : white
 	}
 
-.lgd {
-		background:#DED983;
-		border:outset #B0D000;
-		color:#045071;
+legend.lgd {
+		color:black;
+
 		font-style : bold;
 		font-size : 20;
 		position : relative;
@@ -52,7 +53,6 @@ p {
 
 .ajout_piece {
 	float : right auto;
-	margin-top :5px;
 	margin : 25;
 	width  : 300px;
 	padding : 1em;	
@@ -60,17 +60,9 @@ p {
 	border-radius: 20px;
 	}
 
-.ajout_capteur {	
-	float : right auto;
-	margin-left : 20px;
-	width  : 300px;
-	padding : 1em;
-	border: 1px  solide #CCC;
-	border-radius: 20px;
-	}
-	
-.acces_piece {
-	float : left;
+form.acces_piece {
+	float : left auto;
+
 	margin : 15;
 	width  : 300px;
 	padding : 1em;	
@@ -79,28 +71,32 @@ p {
 	}
 
 
+label {
+	color : white;
 
-.labelMaison {
-    /* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
     display: inline;
     width: 60px;
     text-align: left;
+    font-style : bold;
 }
 
-.fieldsetMaison{
-  background : silver;
-  border:outset #B0D000;
+fieldset{
+
   margin-bottom:1em;
   width:24em;
   padding-top:1.5em;
 }
 	
 
-.pieces {
-		 	
+div.titre {
+		}
+div.pieces {
+		 margin-left: 200px;
+
 		 float:left;
 		 width:500px;
-		 height:675px;
+		 height:1200px;
+		 margin-left: : 200px;
 		 background-color: #B0D000;
 		 border-radius: 20px;
 		 border:outset #B0D000;
@@ -108,25 +104,18 @@ p {
 		
 .modif {
 		 float:right;		 
+		 margin-right: 200px;
 		 width:500px;
-		 height:675px;
+		 height:1200px;
 		 background-color: #B0D000;
 		 border-radius: 20px;
 		 border:outset #B0D000;
 		}
 
-.lapiece {
-		 float:right;
-		 margin-right : 32.5%;
-		 width:600px;
-		 height:675px;
-		 background-color: #B0D000;
-		 border-radius: 20px;
-		 border:outset #B0D000;
-		}
+
 /* les boutons enregistrer */
-.inputMaison[type="submit"] {
-  background:#DED983;
+input[type="submit"] {
+
   font:1.2em "Trebuchet MS", Verdana, sans-serif;
   color:#345071;
 }
