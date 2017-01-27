@@ -1,3 +1,4 @@
+/*
 head{
 	font-family: Tahoma;
 	text-align: center;
@@ -88,7 +89,7 @@ p {
 	border-radius: 20px;
 	}
 .labelMaison {
-    /* Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement */
+   Afin de s'assurer que toutes les étiquettes aient la même dimension et soient alignées correctement 
     display: inline;
     width: 60px;
     text-align: left;
@@ -137,66 +138,90 @@ p {
   font:1.2em "Trebuchet MS", Verdana, sans-serif;
   color:#345071;
 }
+*/
 
-.titre_liste
-{
-	float:left;
-	border:2px;
-	border-style: solid;
-	border-color:white;
-	width:22%;
-	font-family: arial; 
-	font-size: 25;
-	color: white;
-	text-align: center;
-	border-radius:5%;
-	background-color: #B0D000;
-    padding: 10px;
-    height:60%;
-}
 
-.consigne
-{
-	float:right;
-	border-style: solid;
-	width:16%;
-	font-family: arial; 
-	font-size: 25;
-	color: white;
-	text-align: center;
-	border-radius:6%;
-	background-color: #B0D000;
-    padding: 10px;
-    height:60%;
-}
+/* ////////////////// PARAMETRE  //////////////////// */
+#global{
+	width: 100%;
+	height: 100%;
 
-.ajout_fonction
-{
-	position: absolute;
-  	left: 0.58em;
-  	bottom: 2.5em;
-	border: 3px;
-	border-style: dotted;
-	border-color:#B0D000;
-	width:22%;
-	font-family: arial; 
-	font-size: 25;
-	color: #B0D000;
-	text-align: center;
-	border-radius:2%;
-	padding: 0.1%;
-	background-color: white;
+
 }
 
 .titre_PageFonc
 {
+	padding: 1%;
 	float:center;
 	font-family: arial; 
 	font-size: 30;
 	text-align: center;
 	color: #B0D000;
-	padding:1%;
+	border-bottom: 0.5px solid silver;
 }
+
+.consigne
+{
+	float:right;
+	width:15%;
+	font-family: arial; 
+	font-size: 25;
+	color: silver;
+	text-align: center;
+    padding: 5%;
+    max-height:75%;
+
+}
+
+.titre_liste
+{
+	float:left;
+	width:22%;
+	font-family: arial; 
+	font-size: 25;
+	color: silver;
+    padding: 5%;
+    max-height:75%;
+
+
+}
+
+ul a:hover
+{
+	display: inline-block;
+  	vertical-align: middle;
+	border-radius: 1%;
+	font-size: 25;
+	width: 90%;
+}
+
+ul a:link
+{
+   color: silver;
+   text-decoration: none;
+}
+ul a:visited{
+	color: pink;
+}
+ul li{
+	font-size: 20;
+	margin-bottom: 5%;
+}
+
+.ajout_fonction
+{
+	position: absolute;
+  	left: 5%;
+	border-color:#B0D000;
+	font-family: arial; 
+	font-size: 25;
+}
+/*
+
+
+
+
+
 
 .ajout_fonction a:hover
 {
@@ -224,140 +249,72 @@ p {
 
 }
 
-ul{
-	font-family: arial; 
-	font-size: 20;
 
-	color: white;
-	line-height: 300%;
-	
+
+
+
+ /* //////////////////////////////////// TOP /////////////////////////////*/
+
+body{
+	background: linear-gradient(to bottom, #ffffff 70% , #B0D000);
 }
-ul a:hover
+
+header{
+	display:inline-block; 
+	height:10%;
+	width: 100%;
+	padding: 0;
+}
+
+#div_logo
 {
+	width: 20%;
+	height: 100%;
+	max-height: 100%;
 	display: inline-block;
-  	vertical-align: middle;
-  	box-shadow: 1.5px 1.5px 1.5px 1.5px black;
-	background-color: grey;
-	border-color: white;
-	border-radius: 3px;
-}
-ul a:link
-{
-   color: white;
-   text-decoration: none;
-}
-
-
-table
-{
-	border-collapse: separate;
-	width:100%;
-	text-align: center;
-}
-.tab_parametre table
-{
-	border-collapse: collapse;
-	border-color: red;
-	width:50%;
-	text-align: center;
-}
-
-
-#table_bottom td
-{
-
-	font-size: small;
-	border-style: solid;
-	border-width: 1px;
-	background-color: grey;
-	border-radius: 5px;
-	border-color: #D9D9D9;
-
-}
-
-.bouton_bottom{
-	border-style: solid;
-	border-width: 2px;
-
-	font-style: bold;
-	font-size: large;
-	background-color: grey;
-}
-
-a
-{
-	font-color: white;
-}
-/////////////////////////////////////// TOP /////////////////////////////
-
-#div_top{
-	display: block;
 	float: left;
 }
 
-#logo
-{
-	width:40%;
-	height:20%;
-	margin-left: 32%;
+#logo{
+	width: 100%;
+	height: 100%;
 }
 
-
+#div_menu{
+	width: 100%;
+	height: 100%;
+}
 .bouton_menu
 {
 	border-style: solid;
 	border-width: 0px;
 	border-radius: 0px;
 	border-color:#B0D000;
-	width:15%;
-	height: 10%;
+	max-width: 30%;
 	font-style: bold;
-	font-size: large;
 	background-color: #B0D000;
 }
 
+table{
+	height: 100%;
+	width: 80%;
+}
 .bouton_menu:hover
 {
 	background-color: gray;
 	border-color: white;
 	border-radius: 0px;
+
 }
 
-html *
-{
-	font-family: Tangerine;
-}
-
-#table_top a:link
+#table_top a:link, a:black, a:hover, a:visited
 {
    color: black;
    text-decoration: none;
 }
 
-#table_top a:visited
-{
-   color: black;
-   text-decoration: none;
-}
 
-#table_top a:hover
-{
-   color: white;
-   text-decoration: none;
-}
-
-#table_top a:black
-{
-   color: none;
-   text-decoration: none;
-}
-
-#table_bottom a:visited
-{
-   color: white;
-   text-decoration: none;
-}
-#table_bottom a:link
+#table_bottom a:visited, a:link
 {
    color: white;
    text-decoration: none;
@@ -374,16 +331,58 @@ html *
     margin-left:200px;
     background-color: #cccccc;
 }
+/* //////////////////////////////////// Bottom /////////////////////////////*/
 
-/*/////////////////////////////////////////PARTIE FORMULAIRE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+footer
+{
+	height: 5%;
+	width: 100%;
+	border-top: 1px solid grey;
+
+}
+
+#bottom{
+margin-left: 25%;
+}
+
+
+/* ////////////////////////////////////////PARTIE FORMULAIRE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 fieldset{
 	padding: 0;
 	color: grey;
 	border-radius: 10px;
 	border: none;
-	background-color: silver;
-	}
+	background-color: lightgrey;
+}
+
+label{
+	display: block;
+	float: left;
+	width: 22%;
+	margin-left: 5%;
+}
+
+input{
+	margin-left: 20%;
+	margin-bottom: 2%; 
+	height: 25px;
+	width: 50%;
+	border-radius: 2px;
+	border: none;
+	border-bottom: solid #B0D000;
+}
+
+legend{
+	color: black;
+	font-size: 30px;
+	text-align: top;
+}	
+
+#formulaire{
+	padding-left: 20%;
+	padding-right: 20%;
+}
 
 .fieldAjoutFonc 
 {
@@ -418,34 +417,13 @@ fieldset{
 	border: none;
 	border-bottom: solid #B0D000 3px;
 }
-label{
-	display: block;
-	float: left;
-	width: 25%;
-}
 
-input{
-	margin-left: 20%;
-	margin-bottom: 2%; 
-	height: 25px;
-	width: 50%;
-	border-radius: 2px;
-	border: none;
-	border-bottom: solid #B0D000;
-}
 #input-cle{
 	width: 90%;
 	margin-left: 3%;
 }
 
-legend{
-	color: black;
-	font-size: 30px;
-}
-#formulaire{
-padding-left: 20%;
-padding-right: 20%;
-}
+
 
 #form-envoie{ /* le bouton envoie */
 	width: 30%;
