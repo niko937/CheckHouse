@@ -23,8 +23,8 @@
 		 		Consignes
 		 	</div>
 
-<div class="titre_liste">
-		 		Autres fonctionnalitées Je m'aime
+			<div class="titre_liste">
+		 		Autres fonctionnalitées
 
 		 		<ul id="ul_parametre">
 		 			
@@ -66,6 +66,8 @@
 
 		 		<div class="ajout_fonction">	 		
 	 				<a href="../visuel/FormAjoutFonction.php?id=<?php $idPiece=recupIdPieceFromMaison(); echo $idPiece;?>"> + ajouter une fonction </a>
+
+
 	 			</div>
 	 		</div>
  	
