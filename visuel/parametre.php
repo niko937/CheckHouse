@@ -24,7 +24,7 @@
 		 	</div>
 
 <div class="titre_liste">
-		 		Autres fonctionnalitées
+		 		Autres fonctionnalitées Je m'aime
 
 		 		<ul id="ul_parametre">
 		 			
