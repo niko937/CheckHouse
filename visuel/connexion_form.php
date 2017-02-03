@@ -15,7 +15,7 @@
 		
 		<fieldset class="fieldAjoutFonc"> <legend></legend> <br>
 
-			<label class="labelAjoutFonc">Identifiant</label>  
+			<label class="labelAjoutFonc">E-Mail</label>  
 			<input class="inputAjoutFonc" name="Identifiant" type="text"></input> <br>	
 
 			<label class="labelAjoutFonc">Mot de passe</label>  
