@@ -69,8 +69,8 @@ require ('fonctionnalite.php');
 
 function validateForm() 
 {
-    var identifiant = document.forms["MyForm"]["Identifiant"].value;
-    var Mdp = document.forms["MyForm"]["Mdp"].value;
+    var identifiant = document.forms["formulaire_co"]["Identifiant"].value;
+    var Mdp = document.forms["formulaire_co"]["Mdp"].value;
     
     if (identifiant == "" || Mdp =="") 
     {
