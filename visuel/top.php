@@ -13,19 +13,19 @@
 			<table >
 				<tr>
 					<td class="bouton_menu" type=button>
-						<a href="index.php"> Accueil </a>
+						<a href="../visuel/index.php"> Accueil </a>
 					</td>
 
 					<td class="bouton_menu" type=button> 
-						<a href="ma_maison.php"> Ma Maison </a>
+						<a href="../visuel/ma_maison.php"> Ma Maison </a>
 					</td>
 
 					<td class="bouton_menu" type=button>
-						<a href="support.php"> Support (FAQ) </a>
+						<a href="../visuel/support.php"> Support (FAQ) </a>
 					</td>
 
 					<td class="bouton_menu" type=button>
-						<a href="/visuel/inscription_form.php"> 
+						<a href="../visuel/connexion_form.php"> 
 							<?php
 							session_start();
 							if ($_SESSION['Identifiant']=='') {

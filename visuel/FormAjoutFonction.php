@@ -12,7 +12,7 @@ require ("../fonction/fonctionnalite.php")
 
 	<form id=formulaire method="post" action="../fonction/ajout_fonction.php?id=<?php $idPiece=recupIdPieceFromMaison(); echo $idPiece;?>" enctype="multipart/form-data" href="parametre.php">
 		
-		<fieldset class="fieldAjoutFonc"> <legend></legend> <br>
+		<fieldset> <legend></legend> <br>
 
 			<label class="labelAjoutFonc">Fonctionnalite</label>  
 			<select name="Fonctionnalite" type="text">

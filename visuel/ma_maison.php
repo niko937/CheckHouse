@@ -16,15 +16,15 @@
 
 				<fieldset> 
 
-				    <legend> Ajout d'une pièce</legend>
-						<label> Nom : </label>
+				    <p>Ajout d'une pièce</p>
 
-			 		<input type="text" name="nom" id="nom" placeholder=" Nom de la pièce">
+			 			<input class="ma_maison_input" type="text" name="nom" placeholder=" Nom de la pièce">
 			 			<br />
-					<a href="ma_maison.php">
-					<input class="inputMaison" type="submit" value="Enregistrer la pièce" />
-						</a>
-				</fieldset>
+			 			<input class="ma_maison_input" type="text" name="superficie" placeholder=" superficie"><br/>
+
+					
+				</fieldset><br/>
+				<input id="envoie_mamaison" type="submit" value="Enregistrer la pièce" />
 
 				<!-- <fieldset>
 						
@@ -56,7 +56,7 @@
 
 			<form class ="acces_pieces" method="post" action="accespiece.php">
 				<fieldset>
-					<legend>Accéder à une pièce</legend>
+					<h2>Accéder à une pièce</h2>
 						
 						<?php
     						$bdd = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', 'root', 'root');
