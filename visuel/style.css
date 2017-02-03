@@ -1,4 +1,10 @@
 /* ////////////////////////////  Général  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@font-face{
+	font-family: "Ubuntu" 
+	src: url("//fonts.googleapis.com/css?family=Ubuntu") format('ttf');
+	} 
+
+
 
 #global{
 	width: 100%;
@@ -11,8 +17,10 @@
 	margin-top: 20px;
 
 }body{
-	background: linear-gradient(to bottom, #ffffff 70% , #B0D000);
 	max-height: 98%;
+	background-image: url("../visuel/images/fond.jpg");
+	font-family: "Ubuntu";
+
 }
 
 header{
@@ -20,6 +28,13 @@ header{
 	height:10%;
 	width: 100%;
 	padding: 0;
+}
+h1{
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-family: "Ubuntu";
+
 }
 
 
@@ -54,13 +69,12 @@ table{
 
 .bouton_menu
 {
-	border-style: solid;
-	border-width: 0px;
-	border-radius: 0px;
-	border-color:#B0D000;
-	max-width: 30%;
-	font-style: bold;
-	background-color: silver;
+	/* Style flouté transparent sur les boutton */
+  	border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	text-align: center;
 }
 
@@ -208,7 +222,13 @@ fieldset{
 	color: grey;
 	border-radius: 10px;
 	border: none;
-	background-color: lightgrey;
+/* Style flouté sur le foarm */
+  	border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
 }
 
 label{
@@ -226,6 +246,7 @@ input{
 	border-radius: 2px;
 	border: none;
 	border-bottom: solid #B0D000;
+
 }
 
 legend{
