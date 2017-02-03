@@ -31,4 +31,6 @@
 				</tr>
 			</table>
 		</div>
+		<div id="barre">
+		</div>
 </header>

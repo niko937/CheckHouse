@@ -9,6 +9,6 @@
 
 				<a href="cookies">Cookies </a> |
 
-				<a href="securite">Site sécurisé </a> |
+				<a href="securite">Site sécurisé </a> | 
 	</div>
 </footer>
