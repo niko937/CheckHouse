@@ -36,6 +36,10 @@ require ('fonctionnalite.php');
                         $identifiantExist = $data['Mail'];              
                         $MotDePasse = $data['Mdp']; 
                         header("Location: ../visuel/ma_maison.php?idUser=".$idUtilisateur);
+                        session_start();
+                        $_SESSION['Identifiant'] = $identifiant;
+                        $_SESSION['Mdp'] = $Mdp;
+
                         exit;
                     }
                 }
@@ -58,7 +62,9 @@ require ('fonctionnalite.php');
     	}
 		$conn = null;
 	}
+
 ?>
+
 <script>
 
 function validateForm() 
