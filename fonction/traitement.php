@@ -22,8 +22,9 @@ ob_start();
    	 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			$stmt= $conn->prepare("INSERT INTO piece (NomPiece, Surface, Utilsateur_idUtilsateur) VALUES ('$Nom', 45, 1)");  //Sécurité
             $stmt->execute();
-            ob_clean();
             header("Location: ../visuel/ma_maison.php");
+            
+            ob_clean();
             ob_end_flush();
 ?>
 
