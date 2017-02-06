@@ -1,8 +1,9 @@
 <html>
 	
 	<?php 
-
+		session_start();
 		include("top.php");
+		include("../fonction/traitement.php");
 		include ("../fonction/connectionfunc.php");
 	?>
 
@@ -11,6 +12,7 @@
 		<div id="global"> 
 
 			<h2>Modifications</h2>
+
 
 			<form class="ajout_piece" method="post" action="../fonction/traitement.php"> 
 
@@ -61,7 +63,7 @@
 						<?php
     						$bdd = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', 'root', 'root');
     						
-							$reponse = $bdd->query('SELECT * FROM piece');
+							$reponse = $bdd->query("SELECT * FROM piece WHERE `Utilsateur_idUtilsateur` = $Id");
 
 							while ($donnees = $reponse->fetch())
 							 {

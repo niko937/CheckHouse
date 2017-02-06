@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <head>
 		<title>controleur de titre à créer a voir comment...</title>
 		<link rel="stylesheet" type ="text/css" media="screen" href="style.css"> 
@@ -26,16 +29,18 @@
 
 					<td class="bouton_menu" type=button>
 						<a href="../visuel/connexion_form.php"> 
+							
+
 							<?php
-							session_start();
-							if ($_SESSION['Identifiant']=='') {
+							if ($_SESSION['id'] == 0) {
 								echo 'Connexion';
 							} else {
-								echo $_SESSION['Identifiant'];
+								print_r($_SESSION['pseudo']);
 							}
 																
-							
 							?>
+							
+
 								
 						</a>
 					</td>
