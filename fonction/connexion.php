@@ -42,7 +42,7 @@ require ('fonctionnalite.php');
                 }
                 
             }
-                if(strcmp($Identifiant, $data['Mail']) == 0 )
+                if(strcmp($Identifiant, $data['Mail']) == 0 ) //comparer les caractère
                 {
                      echo "ez";
                 }

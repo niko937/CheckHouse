@@ -1,5 +1,6 @@
 <?php 
 include 'top.php';
+include ('../fonction/inscription.php');
  ?>
  
  <header><link rel=stylesheet type=text/css href="/CheckHouse/visuel/style.css">
@@ -8,7 +9,7 @@ include 'top.php';
 <body>
 
 <h1> formulaire d'inscription </h1>
-	<form id=formulaire method="post" action="/CheckHouse/fonction/inscription.php" enctype="multipart/form-data">
+	<form name ="form_inscription" id=formulaire method="post" action="/CheckHouse/fonction/inscription.php" onsubmit="return validateFormInscription()">
 
 
 		
@@ -34,14 +35,14 @@ include 'top.php';
 		<legend>Adresse</legend><br>
 			<label for="adresse">Adresse </label> <input type="text" name="Adresse" placeholder="Ex: 10 Rue de Vanves">
 			<label for="code_postal">Code postal</label><input name="CodePostal" placeholder="Ex: 75000"><br>
-			<label for="ville">Ville</label><input name="ville" placeholder="Ex: issy-les-moulineaux">
+			<label for="ville">Ville</label><input name="Ville" placeholder="Ex: issy-les-moulineaux">
 	
 		<div id="form-clee"> <legend>Clé produit</legend>
 		<input id="input-cle" type="text" name="cle" placeholder="Indiquer la clé produit de votre capteur figurant à l'arrière du produit">
 		</fieldset>
 		
 		<p>
-		<input id="form-envoie" type="submit" value="S'inscrire" />
+		<input id="form-envoie" type="submit" onclick="validateFormInscription()" value="S'inscrire" />
 		</p>
 	</form>
 <?php include 'bottom.php'; ?>
