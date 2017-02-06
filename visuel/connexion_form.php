@@ -10,8 +10,7 @@
 	</div>
 	
 	<div id="MyForm">
-	<form name="formulaire_co" id="formulaire" method="post" action="../fonction/connexion.php" 
-	onsubmit="return validateForm()">
+	<form name="formulaire_co" id="formulaire" method="post" action="../fonction/connexion.php" onsubmit= "return validateForm()">
 		
 		<fieldset id="form_connect">  <br>
 
