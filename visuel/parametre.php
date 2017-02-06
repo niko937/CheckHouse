@@ -1,8 +1,9 @@
 
 
 <html>
-	 <?php include ("../visuel/top.php");?>
-	 <?php require ("../fonction/fonctionnalite.php"); ?>
+	 <?php include ("../visuel/top.php");
+	 		require ("../fonction/fonctionnalite.php"); 
+	 		?>
 	 
 	 <body>
 
@@ -23,7 +24,7 @@
 		 		Consignes
 		 	</div>
 
-			<div class="titre_liste">
+			<div class="Liste_fontionnalite">
 		 		Autres fonctionnalitées
 
 		 		<ul id="ul_parametre">
@@ -117,14 +118,15 @@
           legend: { position: 'bottom' }
         };
 
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+        var chart = new google.visualization.LineChart(document.getElementById('graph'));
 
         chart.draw(data, options);
       
       }
     </script>
 
-    <div id="curve_chart" style="position:absolute;right:180px;top:60px;width: 800px; height: 500px"></div>
+    <div id="graph">
+    </div>
  	
 	 		
 	 	
