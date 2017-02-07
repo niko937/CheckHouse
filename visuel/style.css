@@ -58,43 +58,78 @@ h1{
 	height: 100%;
 }
 
-table{
-	height: 100%;
-	width: 80%;
-}
-
-.bouton_menu
-{
-	/* Style flouté transparent sur les boutton */
-  	border-bottom: 1px solid;
-	border-bottom-color: #ccc;
-	border-bottom-color: rgba(255, 255, 255, 0.2);
-	background-color: rgba(255, 255, 255, 0.2);
- 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-	text-align: center;
-}
+/* Menu*/
 
 
-.bouton_menu:hover
-{
-	background-color:  #B0D000;
-	border-radius: 0px;
+.bouton_menu, .bouton_menu ul{
+padding:0;
+margin:0;
+list-style:none;
 
 }
-.bouton_menu a:link{
 
-	text-decoration: none;
-	text-align: center;
-	font-size: 25;
-	color: white;
+/* Boutons du menus */
+.bouton_menu li{
+display: inline-block;
+height: 99.5%;
+width: 19.5%;
+
+border-bottom-color: #ccc;
+border-bottom-color: rgba(255, 255, 255, 0.2);
+background-color: rgba(255, 255, 255, 0.4);
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
-.bouton_menu a:visited{
+/* Esspacement sous menu */
+.bouton_menu ul li{
+display:inherit;
+border-radius:0;
+margin-top:;
+width: 99%;
 
-	text-decoration: none;
-	font-size: 25;
-	color: white;
+
+}
+.sous_menu{ /* largeur des sous  menu li */
+	float: right;
+	width: 99%;
+
 }
 
+.bouton_menu ul{ /* Annimation du menu qui apparait */
+margin-top: 5%;
+z-index: 1000;
+max-height:0;
+left: 0;
+right: 0;
+overflow:hidden;
+-moz-transition: .8s all .3s;
+-webkit-transition: .8s all .3s;
+transition: .8s all .3s;
+}
+
+.bouton_menu li:hover ul{ /* fenetre de sous menu */
+max-height:1000%;
+max-width: 98%;
+margin-top: 15%;
+
+}
+
+
+/* les a href */
+.bouton_menu a {
+display: block;
+margin-left: 5%;
+margin-right: 5%;
+height: 100%;
+font-size: 30;
+font-family:arial;
+}
+
+.bouton_menu a:hover {
+font-size: 30;
+display: block;
+margin-left: 5%;
+margin-right: 5%;
+}
 
 /* //////////////////////////////////// Bottom /////////////////////////////*/
 
@@ -129,15 +164,31 @@ margin-left: 30%;
 	font-size: 25;
 	}
 
-.labelMaison{
+.labelMaison
+{
 	border: 2px solid blue;
 
 }
-.acces_pieces{
+
+.acces_pieces
+{
 	float: left;
 	width: 35%;
 	max-height:75%;
+	text-decoration: none;
+	font-size: 30;
 }
+
+
+.acces_pieces a:link,visited{
+
+	text-decoration: none;
+	color: white;
+}
+.acces_pieces a:visited{
+	color: white;
+}
+
 .fieldsetMaison{
 	border-radius: 2px;
 

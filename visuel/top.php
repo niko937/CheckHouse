@@ -13,40 +13,20 @@
 		</div>
 
 		<div id="div_menu">
-			<table >
-				<tr>
-					<td class="bouton_menu" type=button>
-						<a href="../visuel/index.php"> Accueil </a>
-					</td>
 
-					<td class="bouton_menu" type=button> 
-						<a href="../visuel/ma_maison.php"> Ma Maison </a>
-					</td>
+<ul class="bouton_menu">
+	<li><a href="../visuel/connexion_form.php"> Accueil </a></li>
+ 	<li><a href="../visuel/ma_maison.php"> Ma Maison </a></li>
+ 	<li><a href="../visuel/support.php"> Support (FAQ) </a></li>
 
-					<td class="bouton_menu" type=button>
-						<a href="../visuel/support.php"> Support (FAQ) </a>
-					</td>
-
-					<td class="bouton_menu" type=button>
-						<a href="../visuel/connexion_form.php"> 
-							
-
-							<?php
-							if ($_SESSION['id'] == 0) {
-								echo 'Connexion';
-							} else {
-								print_r($_SESSION['pseudo']);
-							}
-																
-							?>
-							
-
-								
-						</a>
-					</td>
-
-				</tr>
-			</table>
+ 	<li><a href="../visuel/connexion_form.php"> Connexion </a>
+		<ul class="sous_menu">
+			<li><a href="#">Mon profil</a></li>
+			<li><a href="../visuel/deco.php">Déconnection</a></li>
+		</ul>
+	</li>
+</ul>
+				
 		</div>
 		<div id="barre">
 		</div>
