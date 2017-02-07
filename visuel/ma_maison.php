@@ -69,15 +69,13 @@
 							 {
 
 								?>
-									<h3>
 								 	<a href= "parametre.php?id=<?php echo $donnees['idPiece'];?>">
 								 	<?php
+								 	
 								 		echo $donnees['NomPiece'] . '<br />';
 								 	?>
 								 	</a>
-								 	</h3>
 								 	<?php
-
 							 }
 						?>
 				</fieldset>
