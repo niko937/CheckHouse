@@ -58,7 +58,7 @@
 
 			<form class ="acces_pieces" method="post" action="accespiece.php">
 				<fieldset>
-					<h2>Accéder à une pièce</h2>
+					<h3>Accéder à une pièce</h3>
 						
 						<?php
     						$bdd = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', 'root', 'root');
