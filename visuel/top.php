@@ -19,7 +19,15 @@
  	<li><a href="../visuel/ma_maison.php"> Ma Maison </a></li>
  	<li><a href="../visuel/support.php"> Support (FAQ) </a></li>
 
- 	<li><a href="../visuel/connexion_form.php"> Connexion </a>
+ 	<li><a href="../visuel/connexion_form.php"> 							<?php
+							if ($_SESSION['id'] == 0) {
+								echo 'Connexion';
+							} else {
+								print_r($_SESSION['pseudo']);
+							}
+																
+							?>
+ </a>
 		<ul class="sous_menu">
 			<li><a href="#">Mon profil</a></li>
 			<li><a href="../visuel/deco.php">Déconnection</a></li>

@@ -7,7 +7,7 @@ require ('fonctionnalite.php');
     $dbname = "mydb";
 //récupération de idPièce à partir de l'URL
     $Identifiant = $_POST['Identifiant'];
-    $Mdp = $_POST['Mdp'];
+    $Mdp = md5($_POST['Mdp']);
     //$idUtilisateur = recupIdUtilisateurFromPiece($idPiece);
 //on tente de se connecter à la base de données
     
