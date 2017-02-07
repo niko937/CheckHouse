@@ -1,22 +1,20 @@
 <?php 
 include './top.php';
 require ("../fonction/fonctionnalite.php")
-
-//indou
-
  ?>
- <link rel=stylesheet type=text/css href="../visuel/style2.css"></head>
-<body /visuel/Images/background.jpg>
+
+<body>
+<div id="global">
 
 	<div class="titre_PageFonc">
 		Nouvelle fonctionnalité
 	</div>
 
-	<form id=formulaire method="post" action="../ajout_fonction.php" enctype="multipart/form-data">
+	<form id=formulaire method="post" action="../fonction/ajout_fonction.php?id=<?php $idPiece=recupIdPieceFromMaison(); echo $idPiece;?>" enctype="multipart/form-data" href="parametre.php">
 		
-		<fieldset id="form-fonctionnalite"> <legend></legend> <br>
+		<fieldset> <legend></legend> <br>
 
-			<label>Fonctionnalite</label>  
+			<label class="labelAjoutFonc">Fonctionnalite</label>  
 			<select name="Fonctionnalite" type="text">
 				<option value="Temperature">Temperature</option>
 				<option value="Humidite">Humidite</option>
@@ -24,14 +22,16 @@ require ("../fonction/fonctionnalite.php")
 				<option value="Volet">Volet</option>
 			</select><br><br><br>
 
-			<label>Cle Produit</label>  
-			<input name="CleProduit" type="integer"></input> <br>
+			<label class="labelAjoutFonc">Cle Produit</label>  
+			<input class="inputAjoutFonc" name="CleProduit" type="integer"></input> <br>
 			
 		</fieldset>
-	</form>
-</body>
-<div>
-				<input class="ajouter_fonc" type="submit" value="Ajouter" />
+		<div>
+				<input class="ajouter_fonc" type="submit" value="Ajouter"/>
 			</div>
+	</form>
+	</div>
+</body>
 
-<?php include '../visuel/bottom_ajout_fonction.php'; ?>
+
+<?php include '../visuel/bottom.php'; ?>

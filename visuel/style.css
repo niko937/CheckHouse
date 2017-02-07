@@ -1,149 +1,265 @@
-head{
-	font-family: Tahoma;
+/* ////////////////////////////  Général  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@import url("//fonts.googleapis.com/css?family=Ubuntu");
+
+
+
+#global{
+	width: 100%;
+	height: 85%;
+}
+
+#barre{
+	float:center;
+	border-bottom: 0.5px solid silver;
+	margin-top: 20px;
+
+}body{
+	max-height: 98%;
+	background-image: url("../visuel/images/fond.jpg");
+
+
+}
+
+header{
+	display:inline-block; 
+	height:10%;
+	width: 100%;
+	padding: 0;
+}
+h1{
+	padding: 0;
+	margin: 0;
+	text-align: center;
+
+}
+
+
+
+ /* //////////////////////////////////// TOP /////////////////////////////*/
+
+
+
+#div_logo
+{
+	width: 20%;
+	height: 100%;
+	max-height: 100%;
+	display: inline-block;
+	float: left;
+}
+
+#logo{
+	width: 100%;
+	height: 100%;
+}
+
+#div_menu{
+	width: 100%;
+	height: 100%;
+}
+
+table{
+	height: 100%;
+	width: 80%;
+}
+
+.bouton_menu
+{
+	/* Style flouté transparent sur les boutton */
+  	border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	text-align: center;
 }
 
-h1{
+
+.bouton_menu:hover
+{
+	background-color:  #B0D000;
+	border-radius: 0px;
+
+}
+.bouton_menu a:link{
+
+	text-decoration: none;
+	text-align: center;
+	font-size: 25;
+	color: white;
+}
+.bouton_menu a:visited{
+
+	text-decoration: none;
+	font-size: 25;
+	color: white;
+}
+
+
+/* //////////////////////////////////// Bottom /////////////////////////////*/
+
+footer
+{
+	height: 4%;
+	width: 100%;
+	border-top: 1px solid grey;
+
+}
+
+#bottom{
+margin-left: 30%;
+}
+
+#bottom a:link,visited{
+
+	text-decoration: none;
+	color: white;
+}
+#bottom a:visited{
+	color: white;
+}
+/* ////////////////////////////  MA MAISON  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.ajout_piece {
+
+	width: 30%;	
+	float: right;
+	max-height:75%;
+	text-align: center;
+	font-family: arial; 
+	font-size: 25;
+	}
+
+.labelMaison{
+	border: 2px solid blue;
+
+}
+.acces_pieces{
+	float: left;
+	width: 35%;
+	max-height:75%;
+}
+.fieldsetMaison{
+	border-radius: 2px;
+
+}
+
+.ma_maison_input{
+	width: 55%;
+	float: left;
+	border-radius: 2px;
+	border: none;
+	border-bottom: 2px solid #B0D000;
+	text-align: center;
+
+	
+	background-color: rgba(255, 255, 255, 0.8);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+#envoie_mamaison{
+	width: 35%;
+	margin: 0;
+	border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ////////////////// PARAMETRE  //////////////////// */
+
+.titre_PageFonc
+{
+	padding: 2%;
+	float:center;
 	font-family: arial; 
 	font-size: 30;
 	text-align: center;
 	color: #B0D000;
 }
 
-ul{
+.consigne
+{
+	float:right;
+	width:15%;
 	font-family: arial; 
-	font-size: 30;
-	text-align: left;
-	color: black;
-}
-#logo
-{
-	height:70px;
-}
-
-#td_logo
-{
-	width:25%;
-}
-
-table
-{
-	border-collapse: separate;
-	width:100%;
+	font-size: 25;
+	color: silver;
 	text-align: center;
+    padding: 5%;
+    max-height:75%;
+
 }
 
-#table_bottom td
+.titre_liste
 {
+	float:left;
+	width:22%;
+	font-family: arial; 
+	font-size: 25;
+	color: silver;
+    padding: 5%;
+    max-height:75%;
 
-	font-size: small;
-	border-style: solid;
-	border-width: 1px;
-	background-color: grey;
-	border-radius: 5px;
-	border-color: #D9D9D9;
 
 }
 
-.bouton_bottom{
-	border-style: solid;
-	border-width: 2px;
-
-	font-style: bold;
-	font-size: large;
-	background-color: grey;
-}
-
-a
+ul a:hover
 {
-	font-color: white;
+	display: inline-block;
+  	vertical-align: middle;
+	border-radius: 1%;
+	font-size: 25;
+	width: 90%;
 }
 
-.bouton_menu
+ul a:link
 {
-	border-style: solid;
-	border-width: 2px;
-	border-radius: 5px;
-	border-color:#B0D000;
-	width:150px;
-	font-style: bold;
-	font-size: large;
-	background-color: #B0D000;
-}
-
-.bouton_menu:hover
-{
-	background-color: gray;
-	border-color: white;
-	border-radius: 10px;
-}
-
-html *
-{
-	font-family: arial;
-}
-
-#table_top a:link
-{
-   color: black;
+   color: silver;
    text-decoration: none;
 }
+ul a:visited{
+	color: silver;
+}
+ul li{
+	font-size: 20;
+	margin-bottom: 5%;
+}
 
-#table_top a:visited
+.ajout_fonction a:link, a:visited
 {
-   color: black;
-   text-decoration: none;
+	position: absolute;
+  	left: 5%;
+	font-family: arial; 
+	font-size: 25;
+	color: grey;
 }
-
-#table_top a:hover
-{
-   color: white;
-   text-decoration: none;
-}
-
-#table_top a:black
-{
-   color: none;
-   text-decoration: none;
-}
-
-#table_bottom a:visited
-{
-   color: white;
-   text-decoration: none;
-}
-#table_bottom a:link
-{
-   color: white;
-   text-decoration: none;
-}
-
-.bouton_login
-{
-	width:250px;
-}
-
-#contenu{
-	width:600px;
-    min-height:400px;
-    margin-left:200px;
-    background-color: #cccccc;
-}
-
-/*/////////////////////////////////////////PARTIE FORMULAIRE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/* ////////////////////////////////////////inscription\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 fieldset{
 	padding: 0;
 	color: grey;
 	border-radius: 10px;
 	border: none;
-	background-color: silver;
-	}
+/* Style flouté sur le foarm */
+  	border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+
 
 label{
 	display: block;
 	float: left;
-	width: 25%;
+	width: 22%;
+	margin-left: 5%;
+	color: black;
+	font-size: 120%;
 }
 
 input{
@@ -153,28 +269,99 @@ input{
 	width: 50%;
 	border-radius: 2px;
 	border: none;
-	border-bottom: solid #B0D000;
-}
-#input-cle{
-	width: 90%;
-	margin-left: 3%;
+	border-bottom: 2px solid #B0D000;
+	text-align: center;
+
+
+
+  	
+	
+	background-color: rgba(255, 255, 255, 0.8);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
 }
 
 legend{
 	color: black;
 	font-size: 30px;
-}
+	text-align: top;
+}	
+
 #formulaire{
-padding-left: 20%;
-padding-right: 20%;
+	padding-left: 20%;
+	padding-right: 20%;
 }
+
+
+
+#input-cle{
+	width: 90%;
+	margin-left: 3%;
+}
+
+
 
 #form-envoie{ /* le bouton envoie */
 	width: 30%;
+	margin-left: 30%;
+
+	border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+/* ////// Ajout Fonction ////// */
+
+.fieldAjoutFonc 
+{
+	color: grey;
+	width: 40%;
+	margin-left: 33.5%;
+	border-radius: 10px;
+	border: none;
+	background-color: silver;
+}
+
+
+.ajouter_fonc
+{
+	width: 10%;
 	background-color: white;
-	border-color: silver;
-	margin-left: 41%;
+	border: solid #B0D000 3px;
+	position: absolute;
+  	left: 45%;
+  	bottom: 43%;
+}
+
+.labelAjoutFonc{
+	width: 30%;
+	float: left;
+}
+
+.inputAjoutFonc{
+	width: 70%;
+	height: 25px;
+	border-radius: 2px;
+	border: none;
+	border-bottom: solid #B0D000 3px;
 }
 
 
 
+
+/* ///////////// Connection \\\\\\\\\\\\*/
+
+#MyForm{
+	margin-top: 3%;
+}
+
+#form_co_envoie{ /* le bouton envoie */
+	width: 25%;
+	margin-left: 33%;
+
+	border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);

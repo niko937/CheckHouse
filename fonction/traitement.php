@@ -1,34 +1,29 @@
 <?php
-// Parametres mysql à remplacer par les vôtres
+ob_start();
+//définition des variables permettant de se connecter au serveur
+	$servername = "localhost";
+	$username = "root";
+	$password = "root";
+	$dbname = "mydb";
+//récupération de idPièce à partir de l'URL
+	$Nom = $_POST['nom'];
+	//$idUtilisateur = recupIdUtilisateurFromPiece($idPiece);
 
-    $dbname = 'mydb';
-    $host='localhost';
-    $user='root';
-    $pass='root';
 
-    $db = mysqli_connect($host, $user, $pass, $dbname);
 
-//    $db->query("SET NAMES UTF8");
+//on tente de se connecter à la base de données
+	
+//Execution de la requette vers la base de données
+	
+	
 
-// Messages d'erreur
-	$msg_erreur = "Erreur. Les champs suivants doivent être obligatoirement remplis :
-	<br/><br/>";
-	$msg_ok = "Votre demande a bien été prise en compte.";
-	$message = $msg_erreur;
-	if (empty($_POST['nom'])) {
-	  $message .= "Nom de la pièce<br/>";
-	   echo $message;
-	}
-	else {
-	 $nom = $_POST['nom'];
-	 $sql = "INSERT INTO piece (NomPiece, Surface, Utilsateur_idUtilsateur) 
-	 VALUES ('$nom', 45, 1)";
-	 $res = mysqli_query($db, $sql);	 
-	 if ($res) {
-    		echo $msg_ok;
- 		 } 
- 	 else {
-   		 echo mysqli_error($db);
-  		}
-  	}
+			$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    		// set the PDO error mode to exception
+   	 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$stmt= $conn->prepare("INSERT INTO piece (NomPiece, Surface, Utilsateur_idUtilsateur) VALUES ('$Nom', 45, 1)");  //Sécurité
+            $stmt->execute();
+            ob_clean();
+            header("Location: ../visuel/ma_maison.php");
+            ob_end_flush();
 ?>
+
