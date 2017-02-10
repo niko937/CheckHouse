@@ -1,20 +1,22 @@
-<html>
-	
-	<?php 
-		session_start();
-		include("top.php");
-		include("../fonction/traitement.php");
-		include ("../fonction/connectionfunc.php");
-	?>
+<?php 
+include("top.php");
+
+if(isset($_SESSION)){
+	require($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/fonction/traitement.php");
+}
+else{
+echo "NO";
+}
+?>
 
 	<body>	
 		
 		<div id="global"> 
 
-			<h2>Modifications</h2>
+			<h2>Ma maison</h2>
 
 
-			<form class="ajout_piece" method="post" action="../fonction/traitement.php"> 
+			<form class="ajout_piece" method="post" action="/CheckHouse/fonction/traitement.php"> 
 
 				<fieldset> 
 
@@ -61,32 +63,34 @@
 					<h3>Accéder à une pièce</h3>
 						
 						<?php
+						if(empty($_SESSION['id'])) {
+							
+							} else {
+							$Id = $_SESSION['id'];
     						$bdd = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', 'root', 'root');
-    						
 							$reponse = $bdd->query("SELECT * FROM piece WHERE `Utilsateur_idUtilsateur` = $Id");
 
-							while ($donnees = $reponse->fetch())
-							 {
+								while ($donnees = $reponse->fetch())
+									{
 
-								?>
-								 	<a href= "parametre.php?id=<?php echo $donnees['idPiece'];?>">
-								 	<?php
-								 	
-								 		echo $donnees['NomPiece'] . '<br />';
-								 	?>
-								 	</a>
-								 	<?php
-							 }
+										?>
+										 	<a href= "parametre.php?id=<?php echo $donnees['idPiece'];?>">
+										<?php
+									 if (!empty($donnees['NomPiece'])){
+										echo $donnees['NomPiece'] . '<br />';
+								 		} 
+							 		else {}
+									 }								
+									}
+						
+
 						?>
 				</fieldset>
 
 			</form>
 				
 		</div>		
-		
+	
 	</body>
-	<?php
-	include ("bottom.php");
-	?>
-</html>
-
+	
+<?php include ("bottom.php"); ?>	

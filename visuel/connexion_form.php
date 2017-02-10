@@ -1,12 +1,13 @@
-<?php include 'top.php';
-	require ('../fonction/connexion.php');
+<?php 
+include 'top.php';
+require ('../fonction/connexion.php');
 ?> 
 
 <body>
 <div id="global">
 
 	<div class="titre_PageFonc">
-		Veuilliez renseignez vos identifiants
+		Veuilliez renseigner vos identifiants
 	</div>
 	
 	<div id="MyForm">
@@ -22,6 +23,9 @@
 		</fieldset><br/>
 			<div>
 				<input id="form_co_envoie" type="submit" value="Connexion"/>
+
+				<input id="form_co_envoie" type="button" value="Inscription" onClick="javascript:document.location.href='inscription_form.php'"/>
+
 			</div>
 
 	</form>
