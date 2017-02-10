@@ -12,7 +12,8 @@
 
 }body{
 	max-height: 98%;
-	background-image: url("../visuel/images/fondtest.png");
+	background-image: url("../visuel/images/fond.jpg");
+	background-position: fixed;
 
 
 }
@@ -147,7 +148,7 @@ footer
 }
 
 #bottom{
-margin-left: 30%;
+margin-left: 18%;
 }
 
 #bottom a:link,visited{
@@ -181,10 +182,10 @@ margin-left: 30%;
 .acces_pieces a:link,visited{
 
 	text-decoration: none;
-	color: white;
+	color: rgb(30,30,30);
 }
 .acces_pieces a:visited{
-	color: white;
+	color: rgb(30,30,30);
 }
 
 .fieldsetMaison{
@@ -200,7 +201,6 @@ margin-left: 30%;
 	border-bottom: 2px solid #B0D000;
 	text-align: center;
 
-	
 	background-color: rgba(255, 255, 255, 0.8);
  	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 
@@ -236,7 +236,7 @@ margin-left: 30%;
 	height: 20%;
 	font-family: arial; 
 	font-size: 25;
-	color: silver;
+	color: rgb(30,30,30);
 	text-align: center;
     padding: 5%;
     max-height:75%;
@@ -256,7 +256,7 @@ margin-left: 30%;
 	height: 20%;
 	font-family: arial; 
 	font-size: 25;
-	color: silver;
+	color: rgb(30,30,30);
 	text-align: center;
     padding: 5%;
     max-height:75%;
@@ -282,11 +282,12 @@ ul a:hover
 
 ul a:link
 {
-   color: silver;
+	color: rgb(30,30,30);
    text-decoration: none;
 }
 ul a:visited{
-	color: silver;
+	color: rgb(30,30,30);
+	
 }
 ul li{
 	font-size: 20;
@@ -299,20 +300,19 @@ ul li{
   	left: 5%;
 	font-family: arial; 
 	font-size: 25;
-	color: grey;
+	color: rgb(30,30,30);
 }
 
 /* Parametre graphique */
 
 #graph{
 	float: right;
-border: 1px solid red;
 	width: 35%;
 	height: 55%;
 
 	border-bottom-color: #ccc;
 	border-bottom-color: rgba(255, 255, 255, 0.2);
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.8);
  	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 
 }
@@ -323,14 +323,15 @@ border: 1px solid red;
 fieldset{
 	font-family: 'Ubuntu';
 	padding: 0;
-	color: grey;
+	color: rgb(30,30,30);
 	border-radius: 10px;
 	border: none;
+
 /* Style flouté sur le foarm */
   	border-bottom: 1px solid;
 	border-bottom-color: #ccc;
 	border-bottom-color: rgba(255, 255, 255, 0.2);
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.6);
  	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 
 }
@@ -398,7 +399,7 @@ legend{
 
 .fieldAjoutFonc 
 {
-	color: grey;
+	color: rgb(30,30,30);
 	width: 40%;
 	margin-left: 33.5%;
 	border-radius: 10px;

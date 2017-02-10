@@ -13,7 +13,7 @@ echo "NO";
 		
 		<div id="global"> 
 
-			<h2>Modifications</h2>
+			<h2>Ma maison</h2>
 
 
 			<form class="ajout_piece" method="post" action="/CheckHouse/fonction/traitement.php"> 
