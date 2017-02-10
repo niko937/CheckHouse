@@ -70,65 +70,68 @@ require ($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/fonction/fonctionnalite.php");
 	 			</div>
 	 		</div>
 
-	 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	 		<?php 
+		require('../fonction/RecupData.php');
+		$idFonc = recupIdFonc();
+		$idPiece = recupIdPieceFromMaison();
+
+		$jsonTable = RecupData($idFonc, $idPiece);
+		$unite = DisplayUnitY($idFonc, $idPiece);
+	
+?>
+
+  
+  <script type="text/javascript">
+//var tableau = <?php echo $jsonTable; ?>;
+
+ 
+</script>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+ 
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
 
+      //google.charts.load('current', {'packages':['corechart']});
+      //google.charts.setOnLoadCallback(drawChart);
+ 
+      // Callback that creates and populates a data table, 
+      // instantiates the pie chart, passes in the data and
+      // draws it.
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Heure', 'Température'],
-          ['0h',  20],
-          ['1h',  20],
-          ['2h',  20],
-          ['3h',  20],
-          ['4h',  20],
-          ['5h',  20],
-          ['6h',  20],
-          ['7h',  20],
-          ['8h',  20],
-          ['9h',  20],
-          ['10h',  20],
-          ['11h',  19.5],
-          ['12h',  19],
-          ['13h',  18.5],
-          ['14h',  18],
-          ['15h',  18],
-          ['16h',  17.8],
-          ['17h',  17.7],
-          ['18h',  18.5],
-          ['19h',  19.5],
-          ['20h',  20],
-          ['21h',  20],
-          ['22h',  20],
-          ['23h',  20],
-        ]);
-
-        var options = {
-          curveType: 'function',
-          colors:['#900C3F'], 
-          vAxis: {title: 'Celsius', titleColor:'grey',},
-      	  hAxis: {title: 'Heures', titleColor:'grey'},
-          backgroundColor:'transparent',
-          chartArea:{width:'70%'},
-          legend: {textStyle: { color: 'grey',fontSize: 12}},
-  							 
-          legend: { position: 'bottom' }
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('graph'));
-
-        chart.draw(data, options);
+ 
+      // Create the data table.
+      var data = new google.visualization.DataTable(<?=$jsonTable?>);
+      var unit1 = '<?php echo $unite; ?>';	
+      //var unit2 = '<?php echo $unite; ?>';	
       
-      }
+    //data.addRows(tableau);
+      // Set chart options
+      var options = {
+        curveType: 'function',
+        colors:['#900C3F'],
+        vAxis: {title: unit1, titlePosition:'top', titleColor:'grey', gridlines:{color: 'grey'}, textStyle:{color:'grey'}, gridlines: {count:6}},
+        hAxis: {title: 'Heures', titleColor:'grey', titlePosition:'top',textStyle:{color:'grey'}, gridlines: {count:12, color:'transparent'}},
+        
+        backgroundColor:'transparent',
+        chartArea:{width:'70%'},
+        legend: 'none',
+
+      };
+ 
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.LineChart(document.getElementById('graph'));
+      chart.draw(data, options);
+    }
     </script>
+<!--Div that will hold the pie chart-->
+<!--style="width:1000; height:600"-->
 
-    <div id="graph">
-    </div>
- 	
-	 		
-	 	
-
+		 			<div id="graph"> </div>
+ 
 
 	 </div>	 	
 	</body>

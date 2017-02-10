@@ -1,4 +1,8 @@
 <?php
+if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 ob_start();
 	
 //définition des variables permettant de se connecter au serveur
@@ -30,6 +34,8 @@ ob_start();
             ob_end_flush();
         }
         else{
+        
         }
+
 
 ?>
