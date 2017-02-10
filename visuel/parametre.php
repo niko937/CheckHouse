@@ -1,9 +1,7 @@
-
-
-<html>
-	 <?php include ("../visuel/top.php");
-	 		require ("../fonction/fonctionnalite.php"); 
-	 		?>
+<?php
+include ($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/visuel/top.php");
+require ($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/fonction/fonctionnalite.php"); 
+?>
 	 
 	 <body>
 
@@ -66,7 +64,7 @@
 		 		</ul>
 
 		 		<div class="ajout_fonction">	 		
-	 				<a href="../visuel/FormAjoutFonction.php?id=<?php $idPiece=recupIdPieceFromMaison(); echo $idPiece;?>"> + ajouter une fonction </a>
+	 				<a href="/CheckHouse/visuel/FormAjoutFonction.php?id=<?php $idPiece=recupIdPieceFromMaison(); echo $idPiece;?>"> + ajouter une fonction </a>
 
 
 	 			</div>
@@ -134,6 +132,7 @@
 
 	 </div>	 	
 	</body>
-	 <?php include ("../visuel/bottom.php");
+	 <?php 
+	 include ($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/visuel/bottom.php");
 	 ?>
 </html>

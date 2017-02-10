@@ -6,15 +6,17 @@ require ('fonctionnalite.php');
     $password = "root";
     $dbname = "mydb";
 //récupération de idPièce à partir de l'URL
-    $Identifiant = $_POST['Identifiant'];
-    $Mdp = md5($_POST['Mdp']);
+    
+    
     //$idUtilisateur = recupIdUtilisateurFromPiece($idPiece);
 //on tente de se connecter à la base de données
     
 //Execution de la requette vers la base de données
     
-    if(!empty($Identifiant) && !empty($Mdp))
+    if(!empty($_POST['Identifiant']) && !empty($_POST['Mdp']))
     {
+        $Identifiant = $_POST['Identifiant'];
+        $Mdp = md5($_POST['Mdp']);
         try
         {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

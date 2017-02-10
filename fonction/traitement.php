@@ -1,24 +1,21 @@
 <?php
 ob_start();
-session_start();
+	
 //définition des variables permettant de se connecter au serveur
 	$servername = "localhost";
 	$username = "root";
 	$password = "root";
 	$dbname = "mydb";
-//récupération de idPièce à partir de l'URL
-	$Nom = $_POST['nom'];
-	$Superficie = $_POST['superficie'];
-	$Id = $_SESSION['id'];
-	//$idUtilisateur = recupIdUtilisateurFromPiece($idPiece);
-
-
 
 						
 	
-//Execution de la requette vers la base de données
-	
-	
+//Execution de la requette vers la base de données	
+	if(!empty($_POST['nom']) && !empty($_POST['superficie']) && !empty($_SESSION))
+    {
+		$Nom = $_POST['nom'];
+		$Superficie = $_POST['superficie'];
+		$Id = $_SESSION['id'];
+
 
 			$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     		// set the PDO error mode to exception
@@ -31,5 +28,8 @@ session_start();
             
             ob_clean();
             ob_end_flush();
+        }
+        else{
+        }
 
 ?>

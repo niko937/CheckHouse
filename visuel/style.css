@@ -12,7 +12,7 @@
 
 }body{
 	max-height: 98%;
-	background-image: url("../visuel/images/fond.jpg");
+	background-image: url("../visuel/images/fondtest.png");
 
 
 }
@@ -70,7 +70,8 @@ list-style:none;
 /* Boutons du menus */
 .bouton_menu li{
 display: inline-block;
-height: 99.5%;
+margin-top: 5px;
+height: 85%;
 width: 19.5%;
 
 border-bottom-color: #ccc;
@@ -82,15 +83,19 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 .bouton_menu ul li{
 display:inherit;
 border-radius:0;
-margin-top:;
 width: 99%;
 
-
 }
+
 .sous_menu{ /* largeur des sous  menu li */
 	float: right;
 	width: 99%;
+}
 
+.bouton_menu li:hover ul{ /* fenetre de sous menu */
+max-height:1000%;
+max-width: 98%;
+margin-top: 15%;
 }
 
 .bouton_menu ul{ /* Annimation du menu qui apparait */
@@ -105,17 +110,13 @@ overflow:hidden;
 transition: .8s all .3s;
 }
 
-.bouton_menu li:hover ul{ /* fenetre de sous menu */
-max-height:1000%;
-max-width: 98%;
-margin-top: 15%;
 
-}
 
 
 /* les a href */
 .bouton_menu a {
 font-family: 'Ubuntu';
+text-align: center;
 display: block;
 margin-left: 5%;
 margin-right: 5%;
@@ -132,7 +133,6 @@ color: grey;
 }
 
 .bouton_menu a:visited {
-	color: grey;
 
 }
 
@@ -173,7 +173,6 @@ margin-left: 30%;
 {
 	float: left;
 	width: 35%;
-	max-height:75%;
 	text-decoration: none;
 	font-size: 30;
 }
@@ -442,10 +441,11 @@ legend{
 
 #form_co_envoie{ /* le bouton envoie */
 	width: 25%;
-	margin-left: 33%;
-
+	margin-left: 15%;
+	display: inline-block;
 	border-bottom: 1px solid;
 	border-bottom-color: #ccc;
 	border-bottom-color: rgba(255, 255, 255, 0.2);
 	background-color: rgba(255, 255, 255, 0.2);
  	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+ }
