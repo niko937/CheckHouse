@@ -286,6 +286,7 @@ ul a:link
    text-decoration: none;
 }
 ul a:visited{
+	
 	color: rgb(30,30,30);
 	
 }
@@ -305,7 +306,8 @@ ul li{
 
 /* Parametre graphique */
 
-#graph{
+#graph{ 
+
 	float: right;
 	width: 35%;
 	height: 55%;
