@@ -25,7 +25,19 @@
 					</td>
 
 					<td class="bouton_menu" type=button>
-						<a href="/visuel/inscription_form.php"> Connexion </a>
+						<a href="/visuel/inscription_form.php"> 
+							<?php
+							session_start();
+							if ($_SESSION['Identifiant']=='') {
+								echo 'Connexion';
+							} else {
+								echo $_SESSION['Identifiant'];
+							}
+																
+							
+							?>
+								
+						</a>
 					</td>
 
 				</tr>
