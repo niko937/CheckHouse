@@ -1,12 +1,10 @@
 <?php 
 include './top.php';
 require ("../fonction/fonctionnalite.php")
-
-
-
  ?>
- <link rel=stylesheet type=text/css href="../visuel/style.css"></head>
-<body /visuel/Images/background.jpg>
+
+<body>
+<div id="global">
 
 	<div class="titre_PageFonc">
 		Nouvelle fonctionnalité
@@ -14,7 +12,7 @@ require ("../fonction/fonctionnalite.php")
 
 	<form id=formulaire method="post" action="../fonction/ajout_fonction.php?id=<?php $idPiece=recupIdPieceFromMaison(); echo $idPiece;?>" enctype="multipart/form-data" href="parametre.php">
 		
-		<fieldset class="fieldAjoutFonc"> <legend></legend> <br>
+		<fieldset> <legend></legend> <br>
 
 			<label class="labelAjoutFonc">Fonctionnalite</label>  
 			<select name="Fonctionnalite" type="text">
@@ -32,7 +30,8 @@ require ("../fonction/fonctionnalite.php")
 				<input class="ajouter_fonc" type="submit" value="Ajouter"/>
 			</div>
 	</form>
+	</div>
 </body>
 
 
-<?php include '../visuel/bottom_ajout_fonction.php'; ?>
+<?php include '../visuel/bottom.php'; ?>

@@ -1,95 +1,96 @@
-<html>
-	
-	<head>
-		<title>Ma Maison</title>
+<?php 
+include("top.php");
 
+if(isset($_SESSION)){
+	require($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/fonction/traitement.php");
+}
+else{
+echo "NO";
+}
+?>
 
+	<body>	
 		
-	</head>
-	
-	<?php 
+		<div id="global"> 
 
-		include("top.php");
-		include ("../fonction/connectionfunc.php");
+			<h2>Ma maison</h2>
 
 
-	?>
-	<body>
-		<h1 class="h1maison" align="center";><b>Ma Maison</b></h1>		
-		
+			<form class="ajout_piece" method="post" action="/CheckHouse/fonction/traitement.php"> 
 
-		<div class="modif"><h2>Modifications</h2>
-
-			<form class="ajout_piece" align="center" method="post" action="../fonction/traitement.php"> 
 				<fieldset> 
 
-			    	<legend class="lgd">Ajout d'une pièce</legend>
-					<label class="labelMaison"> Nom : </label>
-			 		<input type="text" name="nom" id="nom" placeholder=" Nom de la pièce"><br /><br />
-						<br /><br />
-					<as href="ma_maison.php">
-					<input class="inputMaison" type="submit" value="Enregistrer la pièce" />
+				    <p>Ajout d'une pièce</p>
 
-					</a>
-				</fieldset>
+			 			<input class="ma_maison_input" type="text" name="nom" placeholder=" Nom de la pièce">
+			 			<br />
+			 			<input class="ma_maison_input" type="text" name="superficie" placeholder=" superficie"><br/>
 
-				<fieldset>
-					<legend class="lgd">Supprimer une pièce</legend>
+					
+				</fieldset><br/>
+				<input id="envoie_mamaison" type="submit" value="Enregistrer la pièce" />
+
+				<!-- <fieldset>
 						
-						<?php
-    						$bdd = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', 'root', 'root');
-							$reponse = $bdd->query('SELECT * FROM piece');
-							while ($donnees = $reponse->fetch())
-							 {
-							?>
-								<h3>
-							 	<a href= "../fonctfion/suppression.php?id=<?php echo $donnees['idPiece'];?>">
-							 	<?php
-							 		echo $donnees['NomPiece'] . '<br />';
-							 	?>
-							 	</a>
-							 	</h3>
-							 	<?php
-							 }
+
+					<legend class="lgd">Supprimer une pièce</legend>
+							
+							<?php
+	    						$bdd = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', 'root', 'root');
+								$reponse = $bdd->query('SELECT * FROM piece');
+								while ($donnees = $reponse->fetch())
+								 {
 								?>
-				</fieldset>
+									<h3>
+								 	<a href= "../fonctfion/suppression.php?id=<?php echo $donnees['idPiece'];?>">
+								 	<?php
+								 		echo $donnees['NomPiece'] . '<br />';
+								 	?>
+								 	</a>
+								 	</h3>
+								 	<?php
+								 }
+									?> 
+					
+				</fieldset> -->
+
+
+
 			</form>	
 
-		</div>		
-		<div class="pieces"><h2>Mes Pièces</h2>
-
-			<form class ="acces_piece" align ="center" method="post" action="accespiece.php">
-				<fieldset class="fieldsetMaison">
-					<legend class="lgd">Accéder à une pièce</legend>
+			<form class ="acces_pieces" method="post" action="accespiece.php">
+				<fieldset>
+					<h3>Accéder à une pièce</h3>
 						
 						<?php
+						if(empty($_SESSION['id'])) {
+							
+							} else {
+							$Id = $_SESSION['id'];
     						$bdd = new PDO('mysql:host=localhost;dbname=mydb;charset=utf8', 'root', 'root');
-							$reponse = $bdd->query('SELECT * FROM piece');
-							while ($donnees = $reponse->fetch())
-							 {
+							$reponse = $bdd->query("SELECT * FROM piece WHERE `Utilsateur_idUtilsateur` = $Id");
 
-							?>
-								<h3>
-							 	<a href= "parametre.php?id=<?php echo $donnees['idPiece'];?>">
-							 	<?php
-							 		echo $donnees['NomPiece'] . '<br />';
-							 	?>
-							 	</a>
-							 	</h3>
-							 	<?php
+								while ($donnees = $reponse->fetch())
+									{
 
-							 }
-								?>
+										?>
+										 	<a href= "parametre.php?id=<?php echo $donnees['idPiece'];?>">
+										<?php
+									 if (!empty($donnees['NomPiece'])){
+										echo $donnees['NomPiece'] . '<br />';
+								 		} 
+							 		else {}
+									 }								
+									}
+						
+
+						?>
 				</fieldset>
 
 			</form>
-		</div>	
-		<?php 
-			include("bottom.php");	
-		?>	
+				
+		</div>		
+	
 	</body>
-	<?php
-	include ("bottom.php");
-	?>
-</html>
-
+	
+<?php include ("bottom.php"); ?>	
