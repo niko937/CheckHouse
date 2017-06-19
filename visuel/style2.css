@@ -1,0 +1,300 @@
+head{
+	font-family: Tahoma;
+	text-align: center;
+}
+
+.titre_liste
+{
+	float:left;
+	border:2px;
+	border-style: solid;
+	border-color:white;
+	width:22%;
+	font-family: arial; 
+	font-size: 25;
+	color: white;
+	text-align: center;
+	border-radius:5%;
+	background-color: #B0D000;
+    padding: 10px;
+    height:60%;
+}
+
+.consigne
+{
+	float:right;
+	border-style: solid;
+	width:16%;
+	font-family: arial; 
+	font-size: 25;
+	color: white;
+	text-align: center;
+	border-radius:6%;
+	background-color: #B0D000;
+    padding: 10px;
+    height:60%;
+}
+
+.ajout_fonction
+{
+	position: absolute;
+  	left: 0.58em;
+  	bottom: 2.5em;
+	border: 3px;
+	border-style: dotted;
+	border-color:#B0D000;
+	width:22%;
+	font-family: arial; 
+	font-size: 25;
+	color: #B0D000;
+	text-align: center;
+	border-radius:2%;
+	padding: 0.1%;
+	background-color: white;
+}
+
+.titre_PageFonc
+{
+	float:center;
+	font-family: arial; 
+	font-size: 30;
+	text-align: center;
+	color: #B0D000;
+	padding:1%;
+}
+
+.ajout_fonction a:hover
+{
+	background-color: none;
+	border-color: white;
+	text-transform:uppercase;
+	border-radius: 3px;
+}
+.ajout_fonction a:link
+{
+   text-decoration: none;
+   color:black;
+}
+
+.main{
+	display: block;
+	min-height: 72%;
+}
+
+.main_bottom_ajout
+{
+	display: block;
+	min-height: 37%;
+}
+
+}
+
+ul{
+	font-family: arial; 
+	font-size: 20;
+
+	color: white;
+	line-height: 300%;
+	
+}
+ul a:hover
+{
+	display: inline-block;
+  	vertical-align: middle;
+  	box-shadow: 1.5px 1.5px 1.5px 1.5px black;
+	background-color: grey;
+	border-color: white;
+	border-radius: 3px;
+}
+ul a:link
+{
+   color: white;
+   text-decoration: none;
+}
+
+#logo
+{
+	height:70px;
+}
+
+#td_logo
+{
+	width:25%;
+}
+
+table
+{
+	border-collapse: separate;
+	width:100%;
+	text-align: center;
+}
+
+.tab_parametre table
+{
+	border-collapse: collapse;
+	border-color: red;
+	width:50%;
+	text-align: center;
+}
+
+#table_bottom td
+{
+
+	font-size: small;
+	border-style: solid;
+	border-width: 1px;
+	background-color: grey;
+	border-radius: 5px;
+	border-color: #D9D9D9;
+
+}
+
+.bouton_bottom{
+	border-style: solid;
+	border-width: 2px;
+
+	font-style: bold;
+	font-size: large;
+	background-color: grey;
+}
+
+a
+{
+	font-color: white;
+}
+
+.bouton_menu
+{
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+	border-color:#B0D000;
+	width:150px;
+	font-style: bold;
+	font-size: large;
+	background-color: #B0D000;
+}
+
+.bouton_menu:hover
+{
+	background-color: gray;
+	border-color: white;
+	border-radius: 10px;
+}
+
+html *
+{
+	font-family: arial;
+}
+
+
+
+#table_top a:link
+{
+   color: black;
+   text-decoration: none;
+}
+
+#table_top a:visited
+{
+   color: black;
+   text-decoration: none;
+}
+
+#table_top a:hover
+{
+   color: white;
+   text-decoration: none;
+}
+
+#table_top a:black
+{
+   color: none;
+   text-decoration: none;
+}
+
+#table_bottom a:visited
+{
+   color: white;
+   text-decoration: none;
+}
+#table_bottom a:link
+{
+   color: white;
+   text-decoration: none;
+}
+
+.bouton_login
+{
+	width:250px;
+}
+
+#contenu{
+	width:600px;
+    min-height:400px;
+    margin-left:200px;
+    background-color: #cccccc;
+}
+
+/* //fieldsed// */
+select
+{
+	overflow:inherit;
+	display:inline-block;
+	background-color:white;
+	color: black;
+	border-color: silver;
+	border-bottom: solid #B0D000 3.5px;
+	border-radius: 2px;
+}
+
+.fieldAjoutFonc 
+{
+	color: grey;
+	width: 30%;
+	margin-left: 33.5%;
+	border-radius: 10px;
+	border: none;
+	background-color: silver;
+}
+
+#form-fonctionnalite
+{
+	min-height: 30%;
+}
+
+
+.ajouter_fonc
+{
+	width: 10%;
+	background-color: white;
+	border: solid #B0D000 3px;
+	position: absolute;
+  	left: 45%;
+  	bottom: 43%;
+}
+
+.labelAjoutFonc{
+	width: 30%;
+	float: left;
+}
+
+.inputAjoutFonc{
+	width: 70%;
+	height: 25px;
+	border-radius: 2px;
+	border: none;
+	border-bottom: solid #B0D000 3px;
+}
+
+legend{
+	color: white;
+	font-size: 30px;
+}
+#form-envoie{ /* le bouton envoie */
+	width: 30%;
+	background-color: white;
+	border-color: silver;
+	margin-left: 41%;
+}
+
