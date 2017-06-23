@@ -1,4 +1,5 @@
 <?php
+session_start();
 include ($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/visuel/top.php");
 require ($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/fonction/fonctionnalite.php"); 
 ?>
