@@ -1,6 +1,6 @@
 <footer>
 	<div id="bottom">
-				<span>&copy; 2013 MyHouse - G2E</span> |
+				<span>&copy; 2017 MyHouse - G2E</span> |
 				<a href="mentionlegale">Mentions légales </a> |
 
 				<a href="quinoussommes">Qui sommes-nous ? </a> |

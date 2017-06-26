@@ -7,6 +7,5 @@ session_unset ();
 // On détruit notre session
 session_destroy ();
 
-header ('/connexion_form.php');
-echo "ok";
+header("Location: connexion_form.php");
 ?>

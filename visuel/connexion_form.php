@@ -1,35 +1,38 @@
-<?php include 'top.php';
-	require ('../fonction/connexion.php');
+<?php 
+include 'top.php';
+require ('../fonction/connexion.php');
 ?> 
 
- <header><link rel=stylesheet type=text/css href="/CheckHouse/visuel/style.css"></header>
 <body>
 <div id="global">
 
 	<div class="titre_PageFonc">
-		Bienvenue
+		Veuilliez renseigner vos identifiants
 	</div>
 	
-	<form name="MyForm" id="formulaire" method="post" action="../fonction/connexion.php" 
-	onsubmit="return validateForm()">
+	<div id="MyForm">
+	<form name="formulaire_co" id="formulaire" method="post" action="../fonction/connexion.php" onsubmit= "return validateForm()">
 		
-		<fieldset class="fieldAjoutFonc"> <legend></legend> <br>
+		<fieldset id="form_connect">  <br>
 
-			<label class="labelAjoutFonc">E-Mail</label>  
-			<input class="inputAjoutFonc" name="Identifiant" type="text"></input> <br>	
+			 
+			<input  name="Identifiant" type="text" placeholder="E-mail"></input> <br/> <br/>	
 
-			<label class="labelAjoutFonc">Mot de passe</label>  
-			<input class="inputAjoutFonc" name="Mdp" type="password"></input> <br>
+			<input  name="Mdp" type="password" placeholder="Mot de passe"></input> <br>
 			
-		</fieldset>
+		</fieldset><br/>
 			<div>
-				<input class="ajouter_fonc" type="submit" value="Connexion"/>
+				<input id="form_co_envoie" type="submit" value="Connexion"/>
+
+				<input id="form_co_envoie" type="button" value="Inscription" onClick="javascript:document.location.href='inscription_form.php'"/>
+
 			</div>
 
 	</form>
 	</div>
+	</div>
+
+
 </body>
-
-
 
 <?php include 'bottom.php';	?> 

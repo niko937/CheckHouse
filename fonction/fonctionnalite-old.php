@@ -47,12 +47,7 @@ function recupIdFonc()
 {
     global $idFonction;
 
-    if(isset($_GET["idF"]))
-                {
-                    $idFonction = $_GET['idF'];
-                }
-
-    
+    $idFonction = $_GET['idF'];
 
     return $idFonction;
 }

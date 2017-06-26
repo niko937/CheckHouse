@@ -1,5 +1,5 @@
 /* ////////////////////////////  Général  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 #global{
 	width: 100%;
 	height: 85%;
@@ -11,8 +11,11 @@
 	margin-top: 20px;
 
 }body{
-	background: linear-gradient(to bottom, #ffffff 70% , #B0D000);
 	max-height: 98%;
+	background-image: url("../visuel/images/fond.jpg");
+	background-position: fixed;
+
+
 }
 
 header{
@@ -21,8 +24,16 @@ header{
 	width: 100%;
 	padding: 0;
 }
+h1{
+	padding: 0;
+	margin: 0;
+	text-align: center;
 
+}
 
+html{
+	font-family: 'Ubuntu';
+}
 
  /* //////////////////////////////////// TOP /////////////////////////////*/
 
@@ -47,44 +58,84 @@ header{
 	height: 100%;
 }
 
-table{
-	height: 100%;
-	width: 80%;
-}
-
-.bouton_menu
-{
-	border-style: solid;
-	border-width: 0px;
-	border-radius: 0px;
-	border-color:#B0D000;
-	max-width: 30%;
-	font-style: bold;
-	background-color: silver;
-	text-align: center;
-}
+/* Menu*/
 
 
-.bouton_menu:hover
-{
-	background-color:  #B0D000;
-	border-radius: 0px;
+.bouton_menu, .bouton_menu ul{
+padding:0;
+margin:0;
+list-style:none;
 
 }
-.bouton_menu a:link{
 
-	text-decoration: none;
-	text-align: center;
-	font-size: 25;
-	color: white;
+/* Boutons du menus */
+.bouton_menu li{
+display: inline-block;
+margin-top: 5px;
+height: 85%;
+width: 19.5%;
+
+border-bottom-color: #ccc;
+border-bottom-color: rgba(255, 255, 255, 0.2);
+background-color: rgba(255, 255, 255, 0.4);
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
-.bouton_menu a:visited{
+/* Esspacement sous menu */
+.bouton_menu ul li{
+display:inherit;
+border-radius:0;
+width: 99%;
 
-	text-decoration: none;
-	font-size: 25;
-	color: white;
 }
 
+.sous_menu{ /* largeur des sous  menu li */
+	float: right;
+	width: 99%;
+}
+
+.bouton_menu li:hover ul{ /* fenetre de sous menu */
+max-height:1000%;
+max-width: 98%;
+margin-top: 15%;
+}
+
+.bouton_menu ul{ /* Annimation du menu qui apparait */
+margin-top: 5%;
+z-index: 1000;
+max-height:0;
+left: 0;
+right: 0;
+overflow:hidden;
+-moz-transition: .8s all .3s;
+-webkit-transition: .8s all .3s;
+transition: .8s all .3s;
+}
+
+
+
+
+/* les a href */
+.bouton_menu a {
+font-family: 'Ubuntu';
+text-align: center;
+display: block;
+margin-left: 5%;
+margin-right: 5%;
+height: 100%;
+font-size: 30;
+}
+
+.bouton_menu a:hover {
+font-size: 30;
+display: block;
+margin-left: 5%;
+margin-right: 5%;
+color: grey;
+}
+
+.bouton_menu a:visited {
+
+}
 
 /* //////////////////////////////////// Bottom /////////////////////////////*/
 
@@ -97,7 +148,7 @@ footer
 }
 
 #bottom{
-margin-left: 30%;
+margin-left: 18%;
 }
 
 #bottom a:link,visited{
@@ -111,7 +162,7 @@ margin-left: 30%;
 /* ////////////////////////////  MA MAISON  \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 .ajout_piece {
 
-	width: 20%;	
+	width: 30%;	
 	float: right;
 	max-height:75%;
 	text-align: center;
@@ -119,25 +170,58 @@ margin-left: 30%;
 	font-size: 25;
 	}
 
-.labelMaison{
-	border: 2px solid blue;
-
-}
-.acces_pieces{
+.acces_pieces
+{
 	float: left;
 	width: 35%;
-	max-height:75%;
+	text-decoration: none;
+	font-size: 30;
 }
+
+
+.acces_pieces a:link,visited{
+
+	text-decoration: none;
+	color: rgb(30,30,30);
+}
+.acces_pieces a:visited{
+	color: rgb(30,30,30);
+}
+
 .fieldsetMaison{
 	border-radius: 2px;
 
 }
 
+.ma_maison_input{
+	width: 55%;
+	float: left;
+	border-radius: 2px;
+	border: none;
+	border-bottom: 2px solid #B0D000;
+	text-align: center;
+
+	background-color: rgba(255, 255, 255, 0.8);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+#envoie_mamaison{
+	width: 35%;
+	margin: 0;
+	border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
 /* ////////////////// PARAMETRE  //////////////////// */
 
 .titre_PageFonc
 {
-	padding: 1%;
+	padding: 2%;
 	float:center;
 	font-family: arial; 
 	font-size: 30;
@@ -145,31 +229,47 @@ margin-left: 30%;
 	color: #B0D000;
 }
 
-.consigne
+.Liste_fontionnalite
 {
-	float:right;
+	float:left;
 	width:15%;
+	height: 20%;
 	font-family: arial; 
 	font-size: 25;
-	color: silver;
+	color: rgb(30,30,30);
+	text-align: center;
+    padding: 5%;
+    max-height:75%;
+    margin-left: 5%;
+
+   	border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.consigne
+{
+	float:left;
+	width:15%;
+	height: 20%;
+	font-family: arial; 
+	font-size: 25;
+	color: rgb(30,30,30);
 	text-align: center;
     padding: 5%;
     max-height:75%;
 
-}
-
-.titre_liste
-{
-	float:left;
-	width:22%;
-	font-family: arial; 
-	font-size: 25;
-	color: silver;
-    padding: 5%;
-    max-height:75%;
-
+    border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 
 }
+
+
 
 ul a:hover
 {
@@ -182,11 +282,13 @@ ul a:hover
 
 ul a:link
 {
-   color: silver;
+	color: rgb(30,30,30);
    text-decoration: none;
 }
 ul a:visited{
-	color: silver;
+	
+	color: rgb(30,30,30);
+	
 }
 ul li{
 	font-size: 20;
@@ -199,23 +301,51 @@ ul li{
   	left: 5%;
 	font-family: arial; 
 	font-size: 25;
-	color: grey;
+	color: rgb(30,30,30);
 }
+
+/* Parametre graphique */
+
+#graph{ 
+
+	float: right;
+	width: 35%;
+	height: 55%;
+
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.8);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+
 /* ////////////////////////////////////////inscription\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 fieldset{
+	font-family: 'Ubuntu';
 	padding: 0;
-	color: grey;
+	color: rgb(30,30,30);
 	border-radius: 10px;
 	border: none;
-	background-color: lightgrey;
+
+/* Style flouté sur le foarm */
+  	border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.6);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
 }
+
 
 label{
 	display: block;
 	float: left;
 	width: 22%;
 	margin-left: 5%;
+	color: black;
+	font-size: 120%;
 }
 
 input{
@@ -225,7 +355,16 @@ input{
 	width: 50%;
 	border-radius: 2px;
 	border: none;
-	border-bottom: solid #B0D000;
+	border-bottom: 2px solid #B0D000;
+	text-align: center;
+
+
+
+  	
+	
+	background-color: rgba(255, 255, 255, 0.8);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
 }
 
 legend{
@@ -239,9 +378,30 @@ legend{
 	padding-right: 20%;
 }
 
+
+
+#input-cle{
+	width: 90%;
+	margin-left: 3%;
+}
+
+
+
+#form-envoie{ /* le bouton envoie */
+	width: 30%;
+	margin-left: 30%;
+
+	border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+/* ////// Ajout Fonction ////// */
+
 .fieldAjoutFonc 
 {
-	color: grey;
+	color: rgb(30,30,30);
 	width: 40%;
 	margin-left: 33.5%;
 	border-radius: 10px;
@@ -273,19 +433,22 @@ legend{
 	border-bottom: solid #B0D000 3px;
 }
 
-#input-cle{
-	width: 90%;
-	margin-left: 3%;
+
+
+
+/* ///////////// Connection \\\\\\\\\\\\*/
+
+#MyForm{
+	margin-top: 3%;
 }
 
-
-
-#form-envoie{ /* le bouton envoie */
-	width: 30%;
-	background-color: white;
-	border-color: silver;
-	margin-left: 41%;
-}
-
-
-
+#form_co_envoie{ /* le bouton envoie */
+	width: 25%;
+	margin-left: 15%;
+	display: inline-block;
+	border-bottom: 1px solid;
+	border-bottom-color: #ccc;
+	border-bottom-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2);
+ 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+ }
