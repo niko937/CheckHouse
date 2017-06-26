@@ -36,7 +36,7 @@ if(isset($_GET["idF"]))
               $NomFonction = $data['NomFonctionnalite'];
               
 
-              if (strcmp($NomFonction, $var1) == 0)
+              if (strcmp($NomFonction, $var1) == 0)	
               {
                 $Yunit = $var1;
               }
@@ -96,15 +96,16 @@ else
           {
             
               $datetime = $data['DateHeure'];
-              list($date, $time) = explode(' ', $datetime); 
-              list($decimale, $unite, $reste) =sscanf($data['Valeur'],"%1s%1s%1s");
-              $Valeur = $decimale.$unite.'.'.$reste;
-            
-
+              list($date, $time) = explode(' ', $datetime);
+			  list($heure, $minute, $sec) = explode(':', $time);
+              list($decimale, $unite, $reste1,$reste2) =sscanf($data['Valeur'],"%1s%1s%1s%1s");
+              $Valeur = $decimale.$unite.'.'.$reste1.$reste2;
+			  $time = $heure.'.'.$minute;
+       
 
               $temp = array();
         // the following line will used to slice the Pie chart
-              $temp[] = array('v' => (int) $time);
+              $temp[] = array('v' => (float) $time);
         //Values of the each slice : C = new line, V = value
               $temp[] = array('v' => (float) $Valeur);
               $rows[] = array('c' => $temp);
