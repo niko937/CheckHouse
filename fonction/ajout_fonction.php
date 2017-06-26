@@ -53,7 +53,7 @@ require ('fonctionnalite.php');
 
 
     		//echo "Fonction ajoutée";
-    		$sql = "INSERT INTO capteuractionneur (Type, Fonctionnalite_idFonctionnalite, Fonctionnalite_Piece_idPiece, Fonctionnalite_Piece_Utilsateur_idUtilsateur)
+    		$sql = "INSERT INTO capteuractionneur (Fonctionnalite_idFonctionnalite, Fonctionnalite_Piece_idPiece, Fonctionnalite_Piece_Utilsateur_idUtilsateur)
 			VALUES ('$ReferenceFonction','$idFonctionnalite','$idPiece','$idUtilisateur')";
 			$conn->exec($sql);
 

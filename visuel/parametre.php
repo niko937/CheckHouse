@@ -68,6 +68,11 @@ require ($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/fonction/fonctionnalite.php");
 
 
 	 			</div>
+				
+				<div class="Refresh">	 		
+	 				<a href="/CheckHouse/fonction/RecupLogsTest.php?id=<?php $idPiece=recupIdPieceFromMaison(); echo $idPiece;?>"> Rafraichir les données </a>
+					 
+	 			</div>
 	 		</div>
 
 	 		<?php 
