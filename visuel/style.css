@@ -269,7 +269,17 @@ margin-left: 18%;
 
 }
 
+.Refresh
+{
+	float: left;
+	width: 20%;
+	display: block;
+	margin-left: 75%;
+}
 
+#bouton_trame{
+	margin-left: 5%;
+}
 
 ul a:hover
 {

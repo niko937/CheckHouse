@@ -1,7 +1,8 @@
 <?php
-session_start();
 include ($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/visuel/top.php");
 require ($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/fonction/fonctionnalite.php"); 
+//require ($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/fonction/actionneur.php");
+
 ?>
 	 
 	 <body>
@@ -69,14 +70,13 @@ require ($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/fonction/fonctionnalite.php");
 
 
 	 			</div>
-				
-				<div class="Refresh">	 		
-	 				<a href="/CheckHouse/fonction/RecupLogsTest.php?id=<?php $idPiece=recupIdPieceFromMaison(); echo $idPiece;?>"> Rafraichir les données </a>
-					 
-	 			</div>
+			
 	 		</div>
 
+
+
 	 		<?php 
+
 		require('../fonction/RecupData.php');
 		$idFonc = recupIdFonc();
 		$idPiece = recupIdPieceFromMaison();
@@ -136,10 +136,19 @@ require ($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/fonction/fonctionnalite.php");
 <!--Div that will hold the pie chart-->
 <!--style="width:1000; height:600"-->
 
-		 			<div id="graph"> </div>
- 
+	<div id="graph"> </div>
+		  	<div class="Refresh">	 		
+	 				<form name="inscription" method="post" action="../fonction/actionneur.php">
+						<select id="select" name="choix">
+					    	<option value="2"> Activer le ventilateur</option>
+					    	<option value="3"> Désactiver le ventilateur</option>
+						</select>
+        				<input id="bouton_trame" type="submit" name="valider" value="Envoyer requête"/>
+					</form>
+					 
+	 	</div>
+	</div>	
 
-	 </div>	 	
 	</body>
 	 <?php 
 	 include ($_SERVER["DOCUMENT_ROOT"] . "/CheckHouse/visuel/bottom.php");
