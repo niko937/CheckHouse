@@ -88,7 +88,9 @@ else
         // set the PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $stmt= $conn->prepare("SELECT * FROM donnee WHERE CapteurActionneur_Fonctionnalite_idFonctionnalite ='$idFonctionnalite'");
+        $stmt= $conn->prepare("SELECT * FROM donnee ORDER BY DateHeure DESC LIMIT 23");
+//		WHERE CapteurActionneur_Fonctionnalite_idFonctionnalite ='$idFonctionnalite'");
+
         $stmt->execute();
        
         

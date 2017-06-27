@@ -31,7 +31,7 @@ if (empty($_SESSION['id'])) {
  </a>
 		<ul class="sous_menu">
 			<li><a href="#">Mon profil</a></li>
-			<li><a href="/CheckHouse/visuel/deco.php">Déconnection</a></li>
+			<li><a href="/CheckHouse/visuel/deco.php">Déconnexion</a></li>
 		</ul>
 	</li>
 </ul>
