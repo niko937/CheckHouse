@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+//gestion des sessions
 if (empty($_SESSION['id'])) {
 								$pseudo ='Connexion';
 							} else {
@@ -9,7 +9,7 @@ if (empty($_SESSION['id'])) {
 ?>
 
 <head>
-		<title>controleur de titre à créer a voir comment...</title>
+		<title>Check House</title>
 		<link rel="stylesheet" type ="text/css" media="screen" href="/CheckHouse/visuel/style.css"> 
 		<meta charset=UTF-8>
 </head>
